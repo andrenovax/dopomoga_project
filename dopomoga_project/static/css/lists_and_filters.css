@@ -1,0 +1,169 @@
+/*=================================
+			CONTENT
+=================================*/
+
+.pcontent {
+	border-left: 1px solid rgb(200,200,200);
+	border-right: 1px solid rgb(200,200,200);
+}
+
+.pcontent nav, .i_list, .i_list li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*=================================
+			FILTERS
+=================================*/
+
+.pcontent nav {
+	padding: 5px 0;
+	border-top: none;
+	border-left: none;
+}
+
+	.pcontent nav li {
+		padding: 0 0 5px 5px;
+	}
+
+		/*SHOW/HIDE BUTTONS*/
+		.show, .hide { 
+			display: none; 
+			padding-bottom: 5px;
+			}
+
+		.show span, .hide span { 
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+			}
+
+		.show span { background: url('../icons/show.svg') no-repeat 3px 2px scroll; }
+		.hide span { background: url('../icons/hide.svg') no-repeat 3px 2px scroll; }
+
+/*=================================
+			LISTS
+=================================*/
+
+.i_list {
+	padding-bottom: 5px;
+	border-left: 1px solid rgb(200,200,200);
+}
+
+	.i_list li {
+		position: relative;
+		width: 31%;
+		min-width: 200px;
+		margin: 5px 0.5% 0;
+		border: 1px solid rgb(200,200,200);
+		background: rgb(233,233,233);
+	}
+
+
+/*IMAGES AND ICONS*/
+/*too big icons, solve later*/
+.im {
+	display: block;
+	height: 200px;			
+}
+
+		.im:hover {
+			background: none;
+		}
+
+.icons {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	max-width: 100px;
+	overflow: hidden;
+	text-align: right;
+}
+
+		.icons a {
+			margin-bottom: 5px;
+		}
+
+		.icons .icn {
+			display: inline-block;
+			border: 1px solid rgb(200,200,200);
+			width: 50px;
+			height: 50px;
+		}
+
+		.icons .cptn {
+			display: block;
+			max-height: 40px;
+			word-wrap:break-word;
+		}
+
+/*TAGS*/
+.tags { height:45px; }
+.tags .cause { max-width: 31%; }
+
+.uptags {
+	position: absolute;
+	top: 155px;
+}
+
+
+/*TITLE, DESCR, READMORE*/
+.ititle, .idescr, .readmore {
+	display: block;
+	padding: 5px;
+}
+
+.ititle {
+	max-height: 2em;
+	font-size: 19px;
+}
+
+.idescr {
+	height: 95px;
+	border-bottom: 1px solid rgb(200,200,200);
+	overflow: hidden;
+}
+
+.readmore {
+	height: 20px;
+	text-align: center;
+	color: #CC181E;
+	border-bottom: 1px solid rgb(200,200,200);
+}
+
+.grid1o4 { width: 24%; }
+.grid3o4 { width: 74%; }
+.gridall { width: 100%; }
+
+/*======================================
+           BREAK POINTS
+======================================*/
+
+@media screen and (max-width: 564px) {
+	.i_list li {
+		width:100%;
+		padding: 0;
+		border: 5px 0 0;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.pcontent nav  {
+		width:100%;
+		padding: 5px 0 0;
+		border: 0;
+		margin: 0;
+	}
+	 .i_list  {
+		width:99%;
+	}
+	/*SHOW/HIDE MENU*/
+	.show, .show:target + .hide { display: block; }
+	.pcontent nav ul, .show:target  { display: none; }
+	.show:target ~ ul { 
+		display: block; 
+		width:100%;
+	}
+}

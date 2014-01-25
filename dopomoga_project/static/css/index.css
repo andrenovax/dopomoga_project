@@ -1,0 +1,124 @@
+/*===============================================
+                   INTRO ARTICLE
+===============================================*/
+#intro {
+	background-image: url("");
+	padding: 10% 1%;
+	border-left: 1px solid rgb(200,200,200);
+	border-right: 1px solid rgb(200,200,200);
+}
+
+/*===SLOGAN===*/
+#goal {
+	padding: 10px 0 7px;
+}
+
+#goal h1, #goal div, #goal p {
+	padding:  0 0 3px;
+	display: inline-block;
+}
+
+/*===SEARCH FORM===*/
+#intro form {
+	background: rgb(233,233,233);
+	display: inline-block;
+	border: 1px solid rgb(200,200,200);
+	border-bottom-width: 2px;
+	padding: 4px 4px 0;
+	margin-bottom: 5px;
+}
+
+#intro form section, .submitter>* {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 2px;
+}
+
+#intro form section ul {
+	display: none;
+}
+
+.who input{
+	width: 276px;
+	height: 34px;
+	margin-bottom: 2px;
+}
+.picker section>input{
+	width: 88px;
+	height: 34px;
+}
+.submitter input {
+	width: 90px;
+	height: 38px;
+	background-color:#CC181E;
+	color: white;
+	border-color: transparent;
+}
+
+		.submitter input:hover {
+			outline: #CC181E solid 2px;
+		}
+		.submitter input:first-child {
+			margin-right: 4px;
+		}
+		.submitter div {
+			width: 0;
+			height: 0;
+		}
+
+/*===OR===*/
+
+#or_find a span {
+	color: #CC181E;
+}
+
+#or_find a:hover span {
+	color: white;
+}
+
+/*===============================================
+            ABOUT ARTICLES
+===============================================*/
+.about {
+	background-color: rgb(233,233,233);
+	border: 1px solid rgb(200,200,200);
+	border-bottom-width: 2px;
+}
+
+	.about section {
+		padding: 5px 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+		.about section section {
+			vertical-align: top;
+			width: 31%;
+			margin: 0 0.5%;
+		}
+
+			.about h2 { 
+				padding-left: 5px;
+				font-size: 1.45em; }
+
+			.about h4 { 
+				font-weight: bolder; }
+
+			.about h4, .about p { 
+				font-size: 0.9em; 
+				line-height: 1.3em;
+			}
+
+
+/*===============================================
+                 BREAK POINTS
+===============================================*/
+
+@media screen and (max-width: 425px) {
+	.about section section, .about .grid, .submitter { width: 100%;}
+}
+
+@media screen and (max-width: 292px) {
+	.who input, .picker section>input, .submitter input, .picker, .who, .picker section { width: 100%; }
+	.submitter input:first-child { margin-bottom: 4px;}
+}
