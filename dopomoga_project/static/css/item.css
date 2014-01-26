@@ -1,0 +1,107 @@
+.p_item {
+	padding: 10px 0;
+}
+
+/*=========IMAGE==============*/
+.im {
+	display: block;
+	height: 200px;
+	border-top: 1px solid black;
+}
+
+/*=========TITLE, DESCR==============*/
+.name, .group {
+	display: block;
+	padding: 5px;
+	border: 1px solid rgb(200,200,200);
+	border-bottom: 0;
+}
+
+.name {
+	background-color: rgb(233,233,233);
+}
+.group {
+	background-color: rgb(247,247,247);
+}
+
+.descr { 
+	max-height: 200px; 
+	overflow: hidden;
+}
+
+/*=========TAGS==============*/
+.tags { padding-bottom: 5px; }
+
+dt, dd {
+	display: inline;
+	line-height: 1.4em;
+}
+
+.show, .hide {
+	line-height: 1.4em;
+	text-decoration: underline;
+}
+
+/*=========PROGRESS==========*/
+.r_item {
+	position: relative;
+	border: 1px solid rgb(200,200,200);
+	border-bottom-width: 0;
+}
+
+.r_item .icon, .r_about {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.r_item .icon {
+	width: 38px;
+	height: 40px;
+	padding: 5px;
+	border-right: 1px solid rgb(200,200,200);
+}
+
+.r_about {
+	position: absolute;
+	right: 0;
+	left: 50px;
+}
+
+.r_about h4 {
+	display: block;
+	min-height: 25px;
+}
+
+/*SHOW/HIDE DESCR*/
+.hide { display: none; }
+.group:target .hide  { display: inline; }
+.group:target .show { display: none; }
+.group:target { height: 100%;}
+.group:target .descr { max-height: 100%; }
+/*===========GRID=============*/
+.grid1o2 { 
+	width: 49%;
+	min-width: 211px;
+	display: inline-block;
+	vertical-align: top;
+	border-bottom: 1px solid rgb(200,200,200);
+}
+
+.user_in_p {
+	width: 49%;
+	min-width: 60px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+
+/*======================================
+           BREAK POINTS
+======================================*/
+
+@media screen and (max-width: 425px) {
+	.grid1o2 {
+		width:100%;
+	}
+}

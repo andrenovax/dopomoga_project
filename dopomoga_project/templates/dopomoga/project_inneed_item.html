@@ -1,0 +1,120 @@
+{% extends 'dopomoga/base.html' %}
+
+{% block styles %}
+{% load static %}
+<link href="{% static 'css/item.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<article class="p_item">
+	<div class="grid1o2">
+		<img src="" class="im">
+
+		<section id="p_about">
+			<div class="name">{{project.name}}</div>
+			<div id="p_about_d" class="group">
+				<div class="tags">
+					<a href="#">by: {{project.project_author}}</a>
+					<a href="#">in: {{project.place}}</a>
+					{% for cause in project.cause.all %}
+					<a href="#">{{cause}}</a>
+					{% endfor %}
+				</div>
+				<div class="descr">
+					<p>{{project.descr}}</p>
+				</div>
+				<div><a href="#p_about_d" class="show btn">more...</a></div>
+				<div><a href="#" class="hide btn">...less</a></div>
+			</div>
+		</section>
+
+		<section id="user_inneed">
+			<div class="name"><p>USERS IN NEED</p></div>
+			<div class="group">
+			{% if users_inneed %}
+				<ul>
+				{% for user in users_inneed %}
+					<li class="user_in_p">
+						<a href="/dopomoga/userinneed_all/{{user}}" class=""><img src="#"></a>
+						<p class="ititle"><a href="/dopomoga/userinneed_all/{{user}}">{{user}}</a></p>
+					</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+			</div>
+		</section>
+
+		<section id="user_sup">
+			<div class="name"><p>USERS SUPPORTED</p></div>
+			<div class="group">
+				<div class="tags">
+				{% if users_supported %}
+					{% for user in users_supported %}
+						<a href="/dopomoga/userhelper_all/{{user}}">{{user}}</a>
+					{% endfor %}
+				{% endif %}
+				</div>
+			</div>
+		</section>
+
+		<section id="docs">
+			<div class="name"><p>DOCUMENTS</p></div>
+			<div id="docs_d" class="group">
+				<div class="descr">
+					<!--LATER
+					<p></p>
+					<img class="docs_pic" src"#">
+					-->
+				</div>
+				<div><a href="#docs_d" class="show btn">more...</a></div>
+				<div><a href="#" class="hide btn">...less</a></div>
+			</div>
+		</section>
+
+		<section id="reviews">
+			<div class="name"><p>REVIEWS</p></div>
+			<div class="group">
+			<!--LATER -->
+			</div>
+		</section>
+	</div>
+
+	<div class="grid1o2">
+	
+		<section id="r_list">
+		{% for resource in project.resource.all %}
+			<div class="r_item">
+				<div class="icon">
+					<img src="{{resource.icon}}">
+				</div>
+				<div class="r_about">
+					<h4>{{resource}}</h4>
+					<p class="progress"><!--finish later-->
+						<span class="gathered" style="width: 50%">{{project.gathered}} given</span><!-- {{project.gathered_percent}} -->
+						<span class="left">{{project.left}} left</span>
+					</p>
+				</div>
+			</div>
+		{%endfor%}
+		</section>
+
+		<section id="howto">
+			<div class="name"><p>HOW TO HELP</p></div>
+			<div id="howto_d" class="group">
+				<div class="descr">
+					<p></p>
+					<div><a href="#howto_d" class="show btn">more...</a></div>
+					<div><a href="#" class="hide btn">...less</a></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="comments">
+			<div class="name"><p>COMMENTS</p></div>
+			<div class="group">
+			{% include 'dopomoga/comments.html' %}
+			</div>
+		</section>
+	</div>
+</article>
+{% endblock %}

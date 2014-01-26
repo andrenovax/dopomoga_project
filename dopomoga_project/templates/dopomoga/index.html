@@ -1,0 +1,106 @@
+
+{% extends 'dopomoga/base.html' %}
+
+{% block styles %}
+{% load static %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet">
+<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<!-- 
+[intro]: [Big photo] - background image,[Title, descr], [search],[share]=[cause, place, resource, find button]
+[about projects in need] 
+[projects in need]
+[about projects helpers]
+[projects helpers]
+-->
+<article id="intro">
+	<section id="goal">
+		<h1>Find people, that need your help</h1>
+		<div><p>or</p></div>
+		<h1>Add what you want to share</h1>
+		<p class="dopo_descr">Help people for the cause you support the way you like together with 100'000 people joined</p>
+	</section>
+
+	<form>
+		<section class="who">
+			<input list="projectlist" placeholder="Who do you want to help?">
+			<datalist id="projectlist">
+				<option value="Project1"></option>
+			</datalist>
+		</section>
+		<section class="picker">
+			<section>
+				<input type="text" id="causein" value="" placeholder="cause">
+				<ul id="causelist">
+					<li><input type="checkbox" value="Testing"></li>
+				</ul>
+			</section>
+
+			<section>
+				<input type="text" id="resourcein" value="" placeholder="resource">
+				<ul id="resourcelist">
+					<li><input type="checkbox" value="Testing"></li>
+				</ul>
+			</section>
+
+			<section>
+				<input type="text" id="placein" value="" placeholder="place">
+				<ul id="placelist">
+					<li><input type="checkbox" value="Testing"></li>
+				</ul>
+			</section>
+		</section>
+
+		<section class="submitter">
+			<input type="submit" class="btn" value="Search"><!--hiding extra margin between buttons
+		 --><div><p>or</p></div><!--the same
+		 --><input type="submit" class="btn" value="Share">
+		</section>
+	</form>
+
+	<div id="or_find">
+		<a href="#">Or <span>find</span> help you need</a>
+	</div>
+</article>
+
+<article class="about">
+	<section class="grid grid1o4">
+		<h2>Help people in need</h2>
+		<!--<p>Help people in need and organizations, that support them.</p>-->
+	</section>
+	<section class="grid grid3o4">
+		<section>
+			<h4>The way you like</h4>
+			<p>Donate money, volunteer, give the stuff you don't need.</p>
+		</section>
+		<section>
+			<h4>For the cause you support</h4>
+			<p>Healthcare, green, education.</p>
+		</section>
+		<section>
+			<h4>Where you like.</h4>
+			<p>Choose your city.</p>
+		</section>
+	</section>
+</article>
+
+<article class="pcontent">
+{% include 'dopomoga/filters.html' %}
+{% include 'dopomoga/project_inneed_all.html' %}
+</article>
+
+<article class="about">
+	<section class="gridall">
+		<h2>Find help</h2>
+		<!--<p>Find what you need.</p>-->
+	</section>
+</article>
+
+<article class="pcontent">
+{% include 'dopomoga/filters.html' %}
+{% include 'dopomoga/project_helper_all.html' %}
+</article>
+
+{% endblock %}
