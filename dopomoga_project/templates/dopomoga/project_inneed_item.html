@@ -32,9 +32,9 @@
 			<div class="name"><p>USERS IN NEED</p></div>
 			<div class="group">
 			{% if users_inneed %}
-				<ul>
+				<ul class="item_in">
 				{% for user in users_inneed %}
-					<li class="user_in_p">
+					<li>
 						<a href="/dopomoga/userinneed_all/{{user}}" class=""><img src="#"></a>
 						<p class="ititle"><a href="/dopomoga/userinneed_all/{{user}}">{{user}}</a></p>
 					</li>

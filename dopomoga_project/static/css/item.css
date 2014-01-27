@@ -87,7 +87,7 @@ dt, dd {
 	border-bottom: 1px solid rgb(200,200,200);
 }
 
-.user_in_p {
+.item_in li {
 	width: 49%;
 	min-width: 60px;
 	display: inline-block;

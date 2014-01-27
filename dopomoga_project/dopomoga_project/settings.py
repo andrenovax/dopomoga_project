@@ -65,7 +65,6 @@ WSGI_APPLICATION = 'dopomoga_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dopomogadb',
         'USER': 'admin',

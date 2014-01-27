@@ -22,10 +22,12 @@ a, p, h1, h2, h3, h4, h5, h6, li {
 	font-family: 'PT Serif', serif;
 	font-size: 14px;
 	color:rgb(24,24,24);
+	line-height: 1.1em;
 }
 
 a {
 	text-decoration: none;
+	overflow: hidden;
 }
 
 .btn {
@@ -42,9 +44,11 @@ a:hover, .btn:hover, .tags a:hover {/*everything clickable on hover*/
 	cursor: pointer;
 }
 
-input {
+input, textarea {
 	border: 1px solid rgb(200,200,200);
 	line-height: normal;/*firefox fix*/
+	-webkit-appearance: none;/*mobile fix*/
+	-webkit-border-radius: 0;
 }
 
 input:focus, textarea:focus {
@@ -61,7 +65,7 @@ background-color: #CC181E;
 color: white;
 }
 
-img {/*responsive images*/
+img {
 	width: 100%;
 	background-size:contain;
 }
@@ -115,18 +119,13 @@ header {
 				font-family: 'PT Sans', sans-serif;
 			 }
 
-			header a,  #dopo_search {
-				height: 30px;
-				padding: 5px;
-				border-right: 1px solid rgb(200,200,200);
-				font-family: 'PT Sans', sans-serif;
-			 }
 			header a span{
 				display: inline-block;
 				height: 30px;
 				line-height: 30px; 
 				vertical-align: middle;
 			}
+
 			#searchhide span {
 				height: 15px;
 				line-height: 15px; 
@@ -201,8 +200,8 @@ footer {
 	padding: 5px 0;
 }
 
-footer a {
-	height: 20px;
+footer h6 {
+	line-height: 18px;
 }
 
 footer a:hover  {
@@ -213,27 +212,20 @@ footer a:hover  {
 footer nav ul li {
 	display: inline-block;
 	vertical-align: top;
-	width: 19%;
+	width: 18%;
 	min-width: 90px;
+	margin-left: 1%;
 	padding-left: 1px;
-}
-
-footer nav ul li:first-child {
-	margin-left: 5px;
 }
 
 footer p {
 	display: inline-block;
-	margin: 10px 10px 0 5px;
+	margin: 15px 10px 0 5px;
 }
 
 		footer p a {
 			display: inline;
 			border: none;
-		}
-
-		footer p:last-child {
-			padding-left: 10px;
 		}
 
 /*BOX-MODEL AND ALIGNING*/
