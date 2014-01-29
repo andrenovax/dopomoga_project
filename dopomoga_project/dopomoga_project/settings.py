@@ -101,4 +101,4 @@ STATIC_PATH,
 STATIC_ROOT='/anyvaluetowork/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')

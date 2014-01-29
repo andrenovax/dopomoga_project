@@ -18,4 +18,6 @@ urlpatterns = patterns('',
         url(r'^cause_all/(?P<cause_name_url>\w+)/$', views.cause_item, name='cause_item'),
         url(r'^register/$', views.register, name='register'),
         url(r'^login/$', views.user_login, name='user_login'),
-        url(r'^logout/$', views.user_logout, name='user_logout'),)
+        url(r'^get_UserInneed/$', views.get_UserInneed, name='get_UserInneed'),
+        url(r'^get_Resource/$', views.get_Resource, name='get_Resource'),
+        url(r'^get_Cause/$', views.get_Cause, name='get_Cause'),)

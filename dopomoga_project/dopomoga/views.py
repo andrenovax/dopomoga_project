@@ -331,6 +331,53 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/dopomoga/')
 
+
+"""================================
+          SEARCH FORM
+================================"""
+
+def get_UserInneed(request):
+        starts_with = ''
+        if request.method == 'GET':
+            starts_with = request.GET['name']
+        if starts_with:
+            item_list=UserInneedProfile.objects.filter(user__username__istartswith=starts_with)
+        else:
+            item_list=UserInneedProfile.objects.all()
+        return render_to_response('dopomoga/ui_list.html', {'item_list': item_list }, RequestContext(request))
+
+def get_Resource(request):
+        starts_with = ''
+        if request.method == 'GET':
+            starts_with = request.GET['name']
+        item_list=get_List(Resource,starts_with)
+        return render_to_response('dopomoga/sugg.html', {'item_list': item_list }, RequestContext(request))
+
+def get_Cause(request):
+        starts_with = ''
+        if request.method == 'GET':
+            starts_with = request.GET['name']
+        item_list=get_List(Cause,starts_with)
+        return render_to_response('dopomoga/sugg.html', {'item_list': item_list }, RequestContext(request))
+
+def get_List(modelName,starts_with):
+        if starts_with:
+            item_list=modelName.objects.filter(name__istartswith=starts_with)
+        else:
+            item_list=modelName.objects.all()
+        return item_list
+
+"""
+def get_Place(request):
+        starts_with = ''
+        if request.method == 'GET':
+            starts_with = request.GET['place_name']
+        if starts_with:
+            place_list=Place.objects.filter(name__istartswith=starts_with)
+        else:
+            res_list=Cause.objects.all()
+        return render_to_response('dopomoga/cause_list.html', {'cause_list': cause_list }, RequestContext(request))
+"""
 """================================
           HELP FUNCTIONS
 ================================"""

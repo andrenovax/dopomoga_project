@@ -7,6 +7,12 @@
 <link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
 {% endblock %}
 
+{% block scripts %} 
+{% load static %}
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <!-- 
 [intro]: [Big photo] - background image,[Title, descr], [search],[share]=[cause, place, resource, find button]
@@ -17,38 +23,35 @@
 -->
 <article id="intro">
 	<section id="goal">
-		<h1>Find people, that need your help</h1>
-		<div><p>or</p></div>
-		<h1>Add what you want to share</h1>
-		<p class="dopo_descr">Help people for the cause you support the way you like together with 100'000 people joined</p>
+		<h1>Find people, that need your help or</h1>
+		<div><p></p></div>
+		<h1>add what you want to share</h1>
+		<p class="dopo_descr">Help people the way you like together with 100'000 people joined</p>
 	</section>
 
 	<form>
 		<section class="who">
-			<input list="projectlist" placeholder="Who do you want to help?">
-			<datalist id="projectlist">
-				<option value="Project1"></option>
+			<input list="ui_list" id="ui_name" placeholder="Who do you want to help?">
+			<datalist id="ui_list">
 			</datalist>
 		</section>
 		<section class="picker">
 			<section>
-				<input type="text" id="causein" value="" placeholder="cause">
-				<ul id="causelist">
-					<li><input type="checkbox" value="Testing"></li>
+				<input type="text" id="resource_name" value="" placeholder="resource">
+				<ul>
 				</ul>
 			</section>
 
 			<section>
-				<input type="text" id="resourcein" value="" placeholder="resource">
-				<ul id="resourcelist">
-					<li><input type="checkbox" value="Testing"></li>
+				<input type="text" id="cause_name" value="" placeholder="cause">
+				<ul>
 				</ul>
 			</section>
 
 			<section>
-				<input type="text" id="placein" value="" placeholder="place">
-				<ul id="placelist">
-					<li><input type="checkbox" value="Testing"></li>
+				<input type="text" id="place_name" value="" placeholder="place">
+				<ul>
+				<!--LATER {% include 'dopomoga/sugg.html' with item_list=place_list%}-->
 				</ul>
 			</section>
 		</section>
@@ -56,7 +59,7 @@
 		<section class="submitter">
 			<input type="submit" class="btn" value="Search"><!--hiding extra margin between buttons
 		 --><div><p>or</p></div><!--the same
-		 --><input type="submit" class="btn" value="Share">
+		 --><input type="submit" class="btn" value="Add">
 		</section>
 	</form>
 

@@ -40,7 +40,7 @@ a:hover, .btn:hover, .tags a:hover {/*everything clickable on hover*/
 	border-color: transparent;
 }
 
-.btn:hover, input[type="submit"]:hover { 
+.btn:hover, input[type="submit"]:hover, input[type="checkbox"], input[type="checkbox"]+label { 
 	cursor: pointer;
 }
 
@@ -67,7 +67,6 @@ color: white;
 
 img {
 	width: 100%;
-	background-size:contain;
 }
 
 
@@ -94,9 +93,7 @@ html, body { height: 100%; }
 
 header, footer {
 	position: relative;
-	background-color: rgb(233,233,233);
-	border: 1px solid rgb(200,200,200);
-	border-bottom-width: 2px;
+	background-color: rgba(233,233,233,0.75);
 }
 
 header a, footer a {
@@ -110,6 +107,7 @@ header {
 	height: 40px;	
 	border-top-width: 0;
 	border-right-width: 0;
+	border-left: 1px solid rgb(200,200,200);
 }
 
 			header a,  #dopo_search {
@@ -136,6 +134,13 @@ header {
 	float: left;
 }
 
+#logo a{
+	color: #CC181E;
+}
+
+#logo a:hover span {
+	color: white;
+}
 #dopo_search {
     position: relative;
 	width: 183px;
@@ -198,6 +203,7 @@ header nav {
 ===============================================*/
 footer {
 	padding: 5px 0;
+	border: 1px solid rgb(200,200,200);
 }
 
 footer h6 {
