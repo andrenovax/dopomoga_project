@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-	/*Search suggestions*/
-	$('#intro ul').hide();
+	$('#intro ul, .readmore+p, .cancel').hide();
+
+	/*===Search suggestions===*/
 	$('#intro input')
 	.blur(function(){
 		$(this).next().fadeOut("1");
@@ -29,6 +30,26 @@ $(document).ready(function() {
 			    };
 	$('#cause_name').one('click', getCause).keyup(getCause)
 	$('#cause_name+ul').click(function() { $('#cause_name').focus(); } )
+
+	/*===SUPPORT BUTTONS===*/
+    $('.support').click(function(){
+	    var itemid;
+	    itemid = $(this).attr("data-itemid");
+	    $.get('/dopomoga/support_project/', {itemid: itemid}, function(){});
+        $(this).prev().show();
+        $(this).next().show();
+        $(this).hide();
+	});
+    $('.resupport, .hsupport').click(function(){
+        $(this).prev().show();
+        $(this).next().show();
+        $(this).hide();
+	});
+    $('.cancel').click(function(){
+        $(this).next().show();
+        $(this).next().next().hide();
+        $(this).hide();
+	});
 });
 
 /*

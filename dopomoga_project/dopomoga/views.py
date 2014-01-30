@@ -6,6 +6,8 @@ from datetime import datetime
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.models import User 
 from django.contrib.auth.decorators import login_required 
+from django.core.mail import mail_admins
+from forms import *
 
 def about(request):
     context_dict={}
@@ -17,6 +19,10 @@ def index(request):
     project_helper_all = ProjectHelper.objects.order_by('-date_started')[:6]
     project_helper_all = urlator(project_helper_all)
     context_dict = {'project_inneed_all': project_inneed_all, 'project_helper_all': project_helper_all}
+    try:
+        context_dict = addAuthUserDescr(request.user,context_dict)
+    except:
+        pass
     return render_to_response('dopomoga/index.html', context_dict, RequestContext(request))
 
 """================================
@@ -27,6 +33,10 @@ def project_inneed_all(request):
     project_inneed_all = ProjectInneed.objects.order_by('-date_started')
     project_inneed_all = urlator(project_inneed_all)
     context_dict = {'project_inneed_all': project_inneed_all}
+    try:
+        context_dict = addAuthUserDescr(request.user,context_dict)
+    except:
+        pass
     return render_to_response('dopomoga/project_inneed_allpage.html', context_dict, RequestContext(request))
 
 def project_helper_all(request):
@@ -285,7 +295,6 @@ from dopomoga.forms import UserForm, UserProfileForm
 
 """REGISTER"""
 def register(request):
-    logged=False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
         if user_form.is_valid():
@@ -296,11 +305,10 @@ def register(request):
             password = request.POST['password']
             user = authenticate(username=username, password=password)
             login(request, user)
-            logged=True
             return HttpResponseRedirect('/dopomoga/')
         else:
             print user_form.errors
-            return render_to_response('dopomoga/login.html', {'logged':logged, 'user_form': user_form}, RequestContext(request))
+            return render_to_response('dopomoga/login.html', {'user_form': user_form}, RequestContext(request))
     else:
         user_form = UserForm()
         return render_to_response('dopomoga/login.html', {'logged':logged, 'user_form': user_form}, RequestContext(request))
@@ -379,8 +387,33 @@ def get_Place(request):
         return render_to_response('dopomoga/cause_list.html', {'cause_list': cause_list }, RequestContext(request))
 """
 """================================
+          SUPPORT
+================================"""
+
+def support_project(request):
+    context_dict = {}
+    context_dict = addAuthUserDescr(request.user,context_dict)
+    itemid=None
+    if request.method == 'GET':
+        itemid = request.GET['itemid']
+    if itemid:
+        project=ProjectInneed.objects.get(id=itemid)
+        context_dict['userprofile'].projects_supported.add(project)
+    return 
+#render_to_response('dopomoga/support_project.html', context_dict, RequestContext(request))
+
+"""================================
           HELP FUNCTIONS
 ================================"""
+
+def addAuthUserDescr(user,context_dict):
+    user = User.objects.get(username=user)
+    try:
+        userprofile = UserProfile.objects.get(user=user)
+        context_dict['userprofile']=userprofile
+    except:
+        userprofile = None
+    return context_dict
 
 def decode_url(encoded_url):
     decoded_url=encoded_url.replace('_', ' ')

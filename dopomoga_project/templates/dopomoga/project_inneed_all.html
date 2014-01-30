@@ -27,7 +27,9 @@
 
 		<h4 class="ititle"><a href="/dopomoga/project_inneed_all/{{project.url}}">{{project.name}}</a></h4>
 		<p class="idescr">{{project.descr}}</p><!--limit to 256 chars-->
-		<a href="/dopomoga/project_inneed_all/{{project.url}}" class="readmore btn">Read more and help</a>
+		<a href="/dopomoga/project_inneed_all/{{project.url}}" class="readmore btn">Read more</a>
+        <div class="cancel readmore btn">Cancel</div>
+		{% include 'dopomoga/support_project.html' %}
 	</li>
 	{% endfor %}
 </ul>

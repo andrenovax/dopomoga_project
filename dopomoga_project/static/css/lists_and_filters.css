@@ -110,7 +110,7 @@
 
 
 /*TITLE, DESCR, READMORE*/
-.ititle, .idescr, .readmore {
+.ititle, .idescr {
 	display: block;
 	padding: 5px;
 }
@@ -127,10 +127,14 @@
 }
 
 .readmore {
+	vertical-align: top;
+	display: inline-block;
 	height: 20px;
+	padding: 5px 0;
 	text-align: center;
 	color: #CC181E;
 	border-bottom: 1px solid rgb(200,200,200);
+	width: 49%;
 }
 
 .grid1o4 { width: 24%; }

@@ -132,12 +132,7 @@ input:checked + label {
 	font-family: 'PT Sans', sans-serif;
 }
 #or_find a span {
-	color: #CC181E;
-	text-shadow: -0.0em -0.0em 0 rgb(257,257,257);
-}
-
-#or_find a:hover span {
-	color: white;
+	background-color: #CC181E;
 }
 
 /*===============================================
