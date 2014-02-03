@@ -75,29 +75,27 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-TEMPLATE_DIRS = (TEMPLATE_PATH,)
-
-STATIC_URL = '/static/' # https://docs.djangoproject.com/en/1.6/howto/static-files/
-STATICFILES_DIRS = (STATIC_PATH, )
-STATIC_ROOT='/anyvaluetowork/'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
-
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
 
+try:
+    DATABASES = DATABASES
+except:
+    DATABASES['default'] =  dj_database_url.config()
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-# Static asset configuration
-import os
+TEMPLATE_DIRS = (TEMPLATE_PATH,)
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (STATIC_PATH, )
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )#heroku configuratio
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
