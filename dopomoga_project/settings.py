@@ -77,6 +77,7 @@ USE_TZ = True
                                 #PRODUCTIONLIST
 #============================================================================================================================
 
+<<<<<<< HEAD
 # Quick-start development settings - unsuitable for production https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ft%f#%f_*r7d-%*a#28&tijrpyt$vc!b=x)@t#7g4i!@tf)(-!'
