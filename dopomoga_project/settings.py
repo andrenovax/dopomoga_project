@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
     'dopomoga'
 )
 
@@ -87,9 +88,9 @@ TEMPLATE_DEBUG = True
 #===============CHANGE===============
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False #True
-ALLOWED_HOSTS = ['.dopomoga.herokuapp.com']#['*']
+ALLOWED_HOSTS = ['.dopomogaproject.andrenovax.at.getbarista.com']#['*']
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()#uncomment
+#DATABASES['default'] =  dj_database_url.config()#uncomment
 
 
 #===============ADD==================
