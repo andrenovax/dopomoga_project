@@ -37,7 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
     'dopomoga'
 )
 
@@ -57,12 +56,12 @@ WSGI_APPLICATION = 'dopomoga_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dopomogadb',
-        'USER': 'admin',
-        'PASSWORD': '1admin1',
-        'HOST': 'localhost',
+    'default': {        
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'hello.sqlite3', # Or path to database file if using sqlite3.
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '',                      # Set to empty string for default.
     }
 }
