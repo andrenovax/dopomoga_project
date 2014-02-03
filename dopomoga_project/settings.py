@@ -86,10 +86,10 @@ TEMPLATE_DEBUG = True
 
 #===============CHANGE===============
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #True
-ALLOWED_HOSTS = ['.dopomoga.herokuapp.com']#['*']
+DEBUG = True # False
+ALLOWED_HOSTS = ['*']#['.dopomoga.herokuapp.com']
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()#uncomment
+#DATABASES['default'] =  dj_database_url.config()
 
 
 #===============ADD==================
