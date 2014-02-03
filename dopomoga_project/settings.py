@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
+    #'south',
     'dopomoga'
 )
 
@@ -105,7 +105,7 @@ TEMPLATE_LOADERS = (
     )),
 )
 
-ADMINS = (('Andrey', 'andrenovax@gmail.com'), )
+ADMINS = (('admin', 'andrenovax@gmail.com'), )
 MANAGERS = ADMINS
 LOGGING = {
     'version': 1,
