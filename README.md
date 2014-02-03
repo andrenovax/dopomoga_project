@@ -1,9 +1,9 @@
 Dopomoga
 ================
 <em>under development since 07/01/2014</em><br>
-<em>for more details or feedback, please, contact me via pull request, andrenovax@gmail.com or https://www.facebook.com/andrenovax</em>
+<em>for more details or feedback, please, contact me via andrenovax@gmail.com or https://www.facebook.com/andrenovax</em>
 
-<strong>Live Demo: </strong>http://andrenovax.pythonanywhere.com/dopomoga/
+<strong>Live Demo: </strong>http://dopomoga.herokuapp.com/
 <p>“Dopomoga” is a website, where people and companies that want to support charitable projects, and charities and people in need looking for resources, can do it easy and fast by:</p>
 <ul>
 <li> finding current projects, that gather or give resources;</li> 
@@ -26,6 +26,6 @@ Unlike similar projects dopomoga provides a set of features that take all the pa
 More
 ================
 <p>Development of the project just started. I'll provide more details about it, when beta is ready.</p>
-<p>For more details or feedback, please, contact me via pull request, andrenovax@gmail.com or https://www.facebook.com/andrenovax</p>
+<p>For more details or feedback, please, contact me via andrenovax@gmail.com or https://www.facebook.com/andrenovax</p>
 
 Thanks
