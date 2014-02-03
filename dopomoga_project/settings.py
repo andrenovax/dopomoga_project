@@ -1,4 +1,4 @@
-#TEST HEROKU WITH CODESHIP. PART5
+#TEST GETBARISTA
 
 """
 Django settings for dopomoga_project project.
