@@ -1,4 +1,4 @@
-#TEST HEROKU WITH CODESHIP. PART2
+#TEST HEROKU WITH CODESHIP. PART3
 
 """
 Django settings for dopomoga_project project.
