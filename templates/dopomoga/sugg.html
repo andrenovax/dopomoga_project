@@ -1,0 +1,10 @@
+{% if item_list %}
+	{% for item in item_list %}
+		<li>
+			<input id="{{item.name}}" type="checkbox" name="{{item.name}}">
+			<label for="{{item.name}}">{{item.name}}</label>
+		</li>
+	{% endfor %}
+{% else %}
+		<li class="noth">Nothing found</li>
+{% endif %}

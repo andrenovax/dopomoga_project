@@ -1,0 +1,36 @@
+{% if project_inneed_all %}
+<ul class="i_list grid3o4">
+	{% for project in project_inneed_all %}
+	<li>
+		<!--===MINIMUM=== [photo], [name, descr], [res, cause, place, author], [gathered, left], [read more and help]-->
+		<a href="/dopomoga/project_inneed_all/{{project.url}}" class="im"><img src="#"></a>
+		
+		<section class="icons">
+		{% for resource in project.resource.all|slice:":2" %}
+			<a class="icn" href="#"><img src="#"></a>
+			<a class="cptn" href="#">{{resource}}</a>
+		{% endfor %}
+		</section>
+
+		<p class="progress"><!--finish later-->
+			<span class="gathered" style="width: {{project.gathered_percent}}%">{{project.gathered}} gathered</span>
+			<span class="left">{{project.left}} left</span>
+		</p>
+
+		<div class="tags">
+		{% for cause in project.cause.all|slice:":3" %}
+			<p class="cause">{{cause}}</p>
+		{% endfor %}
+			<p>in: {{project.place}}</p>
+			<p>by: {{project.project_author}}</p>
+		</div>
+
+		<h4 class="ititle"><a href="/dopomoga/project_inneed_all/{{project.url}}">{{project.name}}</a></h4>
+		<p class="idescr">{{project.descr}}</p><!--limit to 256 chars-->
+		<a href="/dopomoga/project_inneed_all/{{project.url}}" class="readmore btn">Read more</a>
+        <div class="cancel readmore btn">Cancel</div>
+		{% include 'dopomoga/support_project.html' %}
+	</li>
+	{% endfor %}
+</ul>
+{% endif %}
