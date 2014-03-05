@@ -19,8 +19,8 @@ DATABASES['default'] = dj_database_url.config()
 #===============ADD==================
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
 TEMPLATE_LOADERS = (
     ('django.template.loaders.cached.Loader', (
