@@ -1,12 +1,18 @@
 {% extends 'dopomoga/base.html' %}
 
+
 {% block styles %}
-{% load static %}
-<link href="{% static 'css/about.css' %}" rel="stylesheet">
+	{% load static %}
+	<link href="{% static 'css/about.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
 
+{% block page_name %}
+	<a href="/dopomoga/"><img src="#" alt="">ДОПОМОГА</a>
+{% endblock %}
+
+
+{% block content %}
 <article class="pcontent">
 	<h1>Welcome to Dopomoga</h1>
 	<p>Dopomoga is Some description</p>

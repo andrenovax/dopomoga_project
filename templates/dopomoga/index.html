@@ -1,108 +1,132 @@
-
 {% extends 'dopomoga/base.html' %}
 
+
 {% block styles %}
-{% load static %}
-<link href="{% static 'css/index.css' %}" rel="stylesheet">
-<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
+	{% load static %}
+	<link href="{% static 'css/index.css' %}" rel="stylesheet">
+	<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block scripts %} 
-{% load static %}
-<script src="{% static 'js/index.js' %}"></script>
+
+{% block page_name %}
+	<a href="/dopomoga/"><img src="#" alt="">ДОПОМОГА</a>
+
+	<div>
+		<a href="/dopomoga/project_inneed_all">надати</a>
+		<a href="/dopomoga/project_helper_all">знайти</a>
+	</div>
 {% endblock %}
+
+
+{% block scripts %} 
+	{% load static %}
+	<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+
+
+{% block filters %}
+	{% include 'dopomoga/part/filters.html' %}
+{% endblock %}
+
 
 {% block content %}
 <!-- 
-[intro]: [Big photo] - background image,[Title, descr], [search],[share]=[cause, place, resource, find button]
-[about projects in need] 
-[projects in need]
-[about projects helpers]
-[projects helpers]
+[intro]: [Big photo] - background image, [Title, descr], [search],[share]=[cause, place, resource, find button]
+[projects in need], [projects helpers]
 -->
-<article id="intro">
-	<section id="goal">
-		<h1>Find people, that need your help or</h1>
-		<div><p></p></div>
-		<h1>add what you want to share</h1>
-		<p class="dopo_descr">Help people the way you like together with 100'000 people joined</p>
-	</section>
-
-	<form>
-		<section class="who">
-			<input list="ui_list" id="ui_name" placeholder="Who do you want to help?">
-			<datalist id="ui_list">
-			</datalist>
-		</section>
-		<section class="picker">
-			<section>
-				<input type="text" id="resource_name" value="" placeholder="resource">
-				<ul>
-				</ul>
-			</section>
-
-			<section>
-				<input type="text" id="cause_name" value="" placeholder="cause">
-				<ul>
-				</ul>
-			</section>
-
-			<section>
-				<input type="text" id="place_name" value="" placeholder="place">
-				<ul>
-				<!--LATER {% include 'dopomoga/sugg.html' with item_list=place_list%}-->
-				</ul>
-			</section>
+<article class="intro border">
+	<div class="marger">
+		<section class="goal">
+			<h1>Допоможи людям</h1>
+			<p>Знайди, кому потрібна допомога, або додай, чим можеш поділитись</p>
 		</section>
 
-		<section class="submitter">
-			<input type="submit" class="btn" value="Search"><!--hiding extra margin between buttons
-		 --><div><p>or</p></div><!--the same
-		 --><input type="submit" class="btn" value="Add">
-		</section>
-	</form>
+		<form>
+			<section class="who">
+				<input list="ui_list" id="ui_name" placeholder="Кому допомогти?">
+				<datalist id="ui_list">
+				</datalist>
+			</section>
+			<section class="picker">
+				<section>
+					<input type="text" id="resource_name" value="" placeholder="чим">
+					<ul>
+					</ul>
+				</section>
 
-	<div id="or_find">
-		<a href="#">Or <span>find</span> help you need</a>
+				<section>
+					<input type="text" id="cause_name" value="" placeholder="напрям">
+					<ul>
+					</ul>
+				</section>
+
+				<section>
+					<input type="text" id="place_name" value="" placeholder="де">
+					<ul>
+					<!--LATER {% include 'dopomoga/part/sugg.html' with item_list=place_list%}-->
+					</ul>
+				</section>
+			</section>
+
+			<section class="submitter">
+				<input type="submit" class="btn" value="знайти"><!--hiding extra margin between buttons
+			 --><input type="submit" class="btn" value="додати">
+			</section>
+		</form>
+
+		<article class="pcontent">
+			{% include 'dopomoga/list/project_inneed_all.html' %}
+		</article>
 	</div>
 </article>
 
-<article class="about">
-	<section class="grid grid1o4">
-		<h2>Help people in need</h2>
-		<!--<p>Help people in need and organizations, that support them.</p>-->
-	</section>
-	<section class="grid grid3o4">
-		<section>
-			<h4>The way you like</h4>
-			<p>Donate money, volunteer, give the stuff you don't need.</p>
+
+<article class="intro">
+	<div class="marger">
+		<section class="goal">
+			<h1>Отримай допомогу</h1>
+			<p>Знайди, хто може допомогти, або додай, що необхідно</p>
 		</section>
-		<section>
-			<h4>For the cause you support</h4>
-			<p>Healthcare, green, education.</p>
-		</section>
-		<section>
-			<h4>Where you like.</h4>
-			<p>Choose your city.</p>
-		</section>
-	</section>
+
+		<form>
+			<section class="who">
+				<input list="ui_list" id="ui_name_f" placeholder="Хто допоможе?">
+				<datalist id="ui_list">
+				</datalist>
+			</section>
+			<section class="picker">
+				<section>
+					<input type="text" id="resource_name_f" value="" placeholder="що">
+					<ul>
+					</ul>
+				</section>
+
+				<section>
+					<input type="text" id="cause_name_f" value="" placeholder="напрям">
+					<ul>
+					</ul>
+				</section>
+
+				<section>
+					<input type="text" id="place_name_f" value="" placeholder="де">
+					<ul>
+					<!--LATER {% include 'dopomoga/part/sugg.html' with item_list=place_list%}-->
+					</ul>
+				</section>
+			</section>
+
+			<section class="submitter">
+				<input type="submit" class="btn" value="знайти"><!--hiding extra margin between buttons
+			 --><input type="submit" class="btn" value="додати">
+			</section>
+		</form>
+
+		<article class="pcontent">
+			{% include 'dopomoga/list/project_helper_all.html' %}
+		</article>
+		<div class="ipushdown"></div>
+	</div>
 </article>
 
-<article class="pcontent">
-{% include 'dopomoga/filters.html' %}
-{% include 'dopomoga/project_inneed_all.html' %}
-</article>
-
-<article class="about">
-	<section class="gridall">
-		<h2>Find help</h2>
-		<!--<p>Find what you need.</p>-->
-	</section>
-</article>
-
-<article class="pcontent">
-{% include 'dopomoga/filters.html' %}
-{% include 'dopomoga/project_helper_all.html' %}
-</article>
 
 {% endblock %}

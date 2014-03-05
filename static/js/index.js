@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-	$('#intro ul, .readmore+p, .cancel').hide();
+	$('.intro section ul, .readmore+p, .cancel').hide();
 
 	/*===Search suggestions===*/
-	$('#intro input')
+	$('.intro input')
 	.blur(function(){
 		$(this).next().fadeOut("1");
 	})

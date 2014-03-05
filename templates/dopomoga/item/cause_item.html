@@ -1,22 +1,29 @@
 {% extends 'dopomoga/base.html' %}
 
+
 {% block styles %}
-{% load static %}
-<link href="{% static 'css/item.css' %}" rel="stylesheet">
+	{% load static %}
+	<link href="{% static 'css/item.css' %}" rel="stylesheet">
 {% endblock %}
+
+
+{% block page_name %}
+	<a href="{% url 'index' %}"><img src="#" alt="">ДОПОМОГА</a>
+{% endblock %}
+
 
 {% block content %}
 <article class="p_item">
 	<div class="grid1o2">
 	
-		<img src="{{resource.picture}}" class="im">
-		<img src="{{resource.icon}}">
+		<img src="{{cause.picture}}" class="im">
 
-		<section id="about">
-			<div class="name">{{resource.name}}</div>
+
+		<section id="p_about">
+			<div class="name">{{cause.name}}</div>
 			<div id="p_about_d" class="group">
 				<div class="descr">
-					<p>{{resource.descr}}</p>
+					<p>{{cause.descr}}</p>
 				</div>
 				<div><a href="#p_about_d" class="show btn">more...</a></div>
 				<div><a href="#" class="hide btn">...less</a></div>
@@ -75,23 +82,24 @@
 			</div>
 		</section>
 
-		<section id="cause_sup">
-			<div class="name">CONNECTED CAUSES</div>
+		<section id="resource_sup">
+			<div class="name">CONNECTED RESOURCES</div>
 			<div class="group">
 				<div class="tags">
-				{% if causes_all %}
-					{% for cause in causes_all %}
-						<a href="/dopomoga/cause_all/{{cause}}">{{cause}}</a>
+				{% if resources_all %}
+					{% for resource in resources_all %}
+						<a href="/dopomoga/resource_all/{{resource}}">{{resource}}</a>
 					{% endfor %}
 				{% endif %}
 				</div>
 			</div>
 		</section>
 	</div>
-	
+
 	<div class="grid1o2">
 	
 		<section id="r_list">
+		{% for resource in resources_all %}
 			<div class="r_item">
 				<div class="icon">
 					<img src="{{resource.icon}}">
@@ -104,6 +112,7 @@
 					</p>
 				</div>
 			</div>
+		{%endfor%}
 		</section>
 
 		<section id="comments">
@@ -112,32 +121,30 @@
 			{% include 'dopomoga/comments.html' %}
 			</div>
 		</section>
-	</div>
 
+	</div>
 <!--LATER
-	<a href="#" class="place">{{project.place}}</a>
-				
 	<section id="users_inneed">
 		<div class="name">PEOPLE SUPPORT</div>{{numUH}}
 		<div class="group">
-{!!!% include 'dopomoga/user_helper_all.html' %!!!}
+{!!!% include 'dopomoga/userhelper_all.html' %!!!}
 		</div>
 	</section>
 
 	<section id="users_helper">
 		<div class="name">PEOPLE NEEDS</div>{{numUI}}
 		<div class="group">
-{!!!% include 'dopomoga/user_inneed_all.html' %!!!}
+{!!!% include 'dopomoga/userinneed_all.html' %!!!}
 		</div>
 	</section>
 
-	<section id="causes">
-		<div class="name">CAUSES IN NEED</div>{{numC}}
-		<div class="group">
-{!!!% include 'dopomoga/causes_all.html' %!!!}
+	<section id="resources">
+		<div class="name">RESOURCES FOR CAUSE</div>{{numR}}
+{!!!% include 'dopomoga/resources_all.html' %!!!}
 		</div>
 	</section>
 -->
+	
 </article>
 
 {% endblock %}

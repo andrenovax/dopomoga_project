@@ -1,5 +1,7 @@
 .p_item {
 	padding: 10px 0;
+	margin: 0 auto;
+	max-width: 800px;
 }
 
 /*=========IMAGE==============*/
@@ -82,6 +84,7 @@ dt, dd {
 .grid1o2 { 
 	width: 49%;
 	min-width: 211px;
+	max-width: 422px;
 	display: inline-block;
 	vertical-align: top;
 	border-bottom: 1px solid rgb(200,200,200);
@@ -99,6 +102,12 @@ dt, dd {
 /*======================================
            BREAK POINTS
 ======================================*/
+
+@media screen and (max-width: 645px) {
+	#navtarget:target .grid1o2 {
+		width:100%;
+	}
+}
 
 @media screen and (max-width: 425px) {
 	.grid1o2 {

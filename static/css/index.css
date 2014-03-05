@@ -1,26 +1,37 @@
+.pushdown {
+	display: none;
+}
+
+.ipushdown {
+	height: 58px;
+}
+
 /*===============================================
                    INTRO ARTICLE
 ===============================================*/
-#intro {
+
+.intro {
+	padding: 7% 5px;
 	background-image: url('../img/monaco.jpg');
 	background-size: cover;
-	padding: 12% 1% 20%;
-	border-left: 1px solid rgb(200,200,200);
-	border-right: 1px solid rgb(200,200,200);
 }
 
-#goal, #intro form, #or_find {
-	margin: 0 10%;
+.border {
+	border-bottom: 1px solid white;
+}
+
+.marger {
+	margin: 0 auto;
+	max-width: 663px;
 }
 
 /*===SLOGAN===*/
 
-h1, #goal div, #goal p {
-	display: inline-block;
+.goal {
+	margin: 0;
 }
 
-
-h1, #goal p, #or_find a {
+h1, .goal p {
 	font-weight: 800;
 	color: rgba(255,255,255,1);
 	text-shadow: -0.02em -0.02em 0 rgb(57,57,57);
@@ -28,34 +39,33 @@ h1, #goal p, #or_find a {
 
 h1 {
 	font-size: 38px;
+	display: inline-block;
 }
 
-#goal p {
-	font-size: 21px;
+.goal p {
+	font-size: 20px;
 	font-family: 'PT Sans', sans-serif;
 	letter-spacing: -1px;
 }
 
 /*===SEARCH FORM===*/
-#intro form {
+.intro form {
 	background: rgba(233,233,233,0.75);
-	display: inline-block;
 	padding: 4px 4px 0;
-	margin-top: 5px;
-	margin-bottom: 3px;
+	margin: 7px 0;
 }
 
-#intro form section, .submitter>* {
+.intro form section, .submitter>* {
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: 2px;
 }
 
-#intro form section section {
+.intro form section section {
 	position: relative;
 }
 
-#intro ul {
+.intro section ul {
 	background-color: rgba(200,200,200,0.75);
 	position: absolute;
 	width: 175px;
@@ -68,13 +78,13 @@ h1 {
     z-index: 100;
 }
 
-#intro li {
+.intro section li {
 	position: relative;
 	top: 0;
 	min-height: 30px;
 }
 
-#intro li:nth-child(even) {
+.intro section li:nth-child(even) {
 	background-color: white;
 }
 
@@ -86,7 +96,7 @@ input:checked + label {
 	padding: 5px;
 }
 
-#intro li label {
+.intro li label {
 	position: absolute;
 	display: inline-block;
 	top: 0;
@@ -97,7 +107,7 @@ input:checked + label {
 }
 
 .who input{
-	width: 276px;
+	width: 182px;
 	height: 34px;
 	margin-bottom: 2px;
 }
@@ -108,7 +118,7 @@ input:checked + label {
 .submitter input {
 	width: 90px;
 	height: 38px;
-	background-color:#CC181E;
+	background-color: #CC181E;
 	color: white;
 	border-color: transparent;
 }
@@ -124,65 +134,58 @@ input:checked + label {
 			height: 0;
 		}
 
-/*===OR===*/
-
-#or_find a {
-	font-size: 18px;
-	letter-spacing: -1px;
-	font-family: 'PT Sans', sans-serif;
-}
-#or_find a span {
-	background-color: #CC181E;
-}
-
-/*===============================================
-            ABOUT ARTICLES
-===============================================*/
-.about {
-	background-color: rgba(233,233,233,0.75);
-	border: 1px solid rgba(200,200,200,0.75);
-	border-top-width: 0;
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box;
-}
-
-	.about section {
-		padding: 5px 0;
-		display: inline-block;
-		vertical-align: middle;
-	}
-
-		.about section section {
-			vertical-align: top;
-			width: 31%;
-			margin: 0 0.5%;
-		}
-
-			.about h2 { 
-				padding-left: 5px;
-				font-size: 1.45em; }
-
-			.about h4 { 
-				font-weight: bolder; }
-
-			.about h4, .about p { 
-				font-size: 0.9em; 
-				line-height: 1.3em;
-			}
-
-
 /*===============================================
                  BREAK POINTS
 ===============================================*/
 
-@media screen and (max-width: 425px) {
-	.about section section, .about .grid, .submitter { width: 100%;}
-	h1 { font-size: 26px;}
-	#intro p { font-size: 18px;}
+
+@media screen and (max-width: 699px) {
+	#navtarget:target .submitter { width: 100%; }
+	#navtarget:target h1 { font-size: 26px; }
+	#navtarget:target .goal p { font-size: 18px; }
 }
 
+
+@media screen and (max-width: 466px) {
+	.submitter { width: 100%; }
+	h1 { font-size: 26px; }
+	.goal p { font-size: 18px; }
+}
+
+
+@media screen and (max-width: 544px) {
+	#navtarget:target .who input, #navtarget:target .picker section>input, #navtarget:target .submitter input,
+	#navtarget:target .picker, #navtarget:target .who, #navtarget:target .picker section,
+	#navtarget:target .intro ul {
+		width: 100%;
+	}
+
+	#navtarget:target .submitter input:first-child { margin-bottom: 4px;}
+	#navtarget:target .intro section ul {
+		border-width: 0;
+		margin-left: 1px;
+		position: relative;
+		background-color: transparent;
+	}
+
+	#navtarget:target .intro { padding: 30px 5px; }
+}
+
+
 @media screen and (max-width: 324px) {
-	.who input, .picker section>input, .submitter input, .picker, .who, .picker section, #intro ul { width: 100%; }
+	.who input, .picker section>input, .submitter input,
+	.picker, .who, .picker section,
+	.intro ul {
+		width: 100%;
+	}
+
 	.submitter input:first-child { margin-bottom: 4px;}
-	#intro ul {border-width: 0; margin-left:1px; position: relative; background-color: transparent;}
+	.intro section ul {
+		border-width: 0;
+		margin-left: 1px;
+		position: relative;
+		background-color: transparent;
+	}
+
+	.intro { padding: 30px 5px; }
 }

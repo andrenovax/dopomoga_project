@@ -1,5 +1,3 @@
-
-
 .pcontent  h1 {
 	padding-top: 20px;
 	font-size: 2em;
@@ -40,6 +38,13 @@
 /*======================================
            BREAK POINTS
 ======================================*/
+
+@media screen and (max-width: 737px) {
+	#navtarget:target .words,
+	#navtarget:target .container div img { 
+		width: 100%; 
+	}
+}
 
 @media screen and (max-width: 517px) {
 	.words, .container div img { 
