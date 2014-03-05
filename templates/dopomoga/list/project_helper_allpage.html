@@ -1,0 +1,28 @@
+{% extends 'dopomoga/base.html' %}
+
+
+{% block styles %}
+	{% load static %}
+	<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
+	
+{% endblock %}
+
+
+{% block page_name %}
+	<a href="/dopomoga/"><img src="#" alt="">Д.</a>
+	<a href="/dopomoga/project_helper_all"><img src="#" alt="">Знайти</a>
+{% endblock %}
+
+
+{% block filters %}
+	{% include 'dopomoga/part/filters.html' %}
+{% endblock %}
+
+
+{% block content %}
+<div class="listWrapper">
+	<article class="pcontent">
+		{% include 'dopomoga/list/project_helper_all.html' %}
+	</article>
+</div>
+{% endblock %}

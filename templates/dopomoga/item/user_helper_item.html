@@ -1,9 +1,16 @@
 {% extends 'dopomoga/base.html' %}
 
+
 {% block styles %}
-{% load static %}
-<link href="{% static 'css/item.css' %}" rel="stylesheet">
+	{% load static %}
+	<link href="{% static 'css/item.css' %}" rel="stylesheet">
 {% endblock %}
+
+
+{% block page_name %}
+	<a href="{% url 'index' %}"><img src="#" alt="">ДОПОМОГА</a>
+{% endblock %}
+
 
 {% block content %}
 <article class="p_item">
@@ -91,7 +98,7 @@
 		<section id="comments">
 			<div class="name">COMMENTS</div>
 			<div class="group">
-			{% include 'dopomoga/comments.html' %}
+			{% include 'dopomoga/part/comments.html' %}
 			</div>
 		</section>
 	</div>
@@ -101,14 +108,14 @@
 	<section id="projects_in">
 		<div class="name">TAKE HELP {{user.first_name}} {{user.second_name}} HERE</div>
 		<div class="group">
-		{% include 'dopomoga/project_inneed_all.html' %}
+		{% include 'dopomoga/list/project_inneed_all.html' %}
 		</div>
 	</section>
 
 	<section id="projects_supported">
 		<div class="name">{{user.first_name}} {{user.second_name}} HELPED THIS PROJECTS</div>
 		<div class="group">
-		{% include 'dopomoga/project_helper_all.html' %}
+		{% include 'dopomoga/list/project_helper_all.html' %}
 	</section>
 </article>
 -->

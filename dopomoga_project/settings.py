@@ -17,7 +17,7 @@ SETTINGS_DIR = os.path.dirname(__file__)
 PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
-STATIC_PATH = os.path.join(PROJECT_PATH,'static')
+STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 
 #DIRECTORIES
 TEMPLATE_DIRS = (TEMPLATE_PATH, )
@@ -86,14 +86,15 @@ TEMPLATE_DEBUG = True
 
 #===============CHANGE===============
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #True
-ALLOWED_HOSTS = ['.dopomoga.herokuapp.com']#['*']
+DEBUG = True  # False
+ALLOWED_HOSTS = ['*']  # ['.dopomoga.herokuapp.com']
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()#uncomment
+#DATABASES['default'] =  dj_database_url.config()
 
 
 #===============ADD==================
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+"""
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
@@ -103,6 +104,7 @@ TEMPLATE_LOADERS = (
         'django.template.loaders.app_directories.Loader',
     )),
 )
+"""
 
 ADMINS = (('Andrey', 'andrenovax@gmail.com'), )
 MANAGERS = ADMINS

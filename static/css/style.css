@@ -7,7 +7,7 @@ COLORS:;
 #CC181E - focus
 .btn (input,readmore) - background-color: rgb(247,247,247); .btn, input - border: 1px solid rgb(200,200,200);
 tags - background-color: rgb(247,247,247); border: 1px solid rgb(200,200,200);
-header, footer - background-color: rgb(233,233,233);
+header, footer - background-color: rgb(240,240,240);
 white
 
 black -	color:rgb(24,24,24);
@@ -28,13 +28,14 @@ a, p, h1, h2, h3, h4, h5, h6, li {
 a {
 	text-decoration: none;
 	overflow: hidden;
+	display: block;
 }
 
-.btn {
-	background-color: rgb(247,247,247);
+.btn, .icn {
+	background-color: white;
 }
 
-a:hover, .btn:hover, .tags a:hover {/*everything clickable on hover*/
+a:hover, .btn:hover, .tags a:hover, .icn:hover span {/*everything clickable on hover*/
 	background-color:#CC181E;
 	color: white;
 	border-color: transparent;
@@ -69,139 +70,306 @@ img {
 	width: 100%;
 }
 
+/*SHOW/HIDE BUTTONS*/
+div:target + nav {
+	display: inline-block;
+}
+
+.show, div:target .hide {
+	display: block;
+}
+
+div:target .show { 
+	display: none; 
+}
+
+.hide {
+	display: none;
+	background-color: #CC181E;
+}
+
+/*ICONS*/
+.icn {
+	padding: 5px;
+}
+
+.icn span {
+	padding: 5px 0;
+	height: 20px;
+	width: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
 
 /*===============================================
                 START
 ===============================================*/
 
-#wrapper, .footer_cont {
-	width:100%;
-	max-width: 1018px;
-	margin:0 auto;
+.wrapper {
+	width: 100%;
+	max-width: 99999px;
+	margin: 0 auto;
 }
 
 /*push footer the bottom*/
-html, body { height: 100%; }
-	 #wrapper { min-height: 100%; height: auto !important; height: 100%;
-				margin-bottom: -58px; }
-		.push { height: 58px; }
- .footer_cont { min-height: 58px; }
+     html, body, #navtarget { height: 100%; }
+#wrapper, #main { min-height: 100%; height: auto !important;
+				  margin-bottom: -58px; height: 100%; }
+	    .pushup { height: 41px; }
+	  .pushdown { height: 62px; }
+   .footer_cont { min-height: 62px; }
 
 /*===============================================
                  HEADER & FOOTER COMMON
 ===============================================*/
 
-header, footer {
-	position: relative;
-	background-color: rgba(233,233,233,0.75);
-}
 
 header a, footer a {
-	display: block;
+	font-family: 'PT Sans', sans-serif;
 }
 
 /*===============================================
                  HEADER
 ===============================================*/
 header {
-	height: 40px;	
+    position: fixed;
+    top: 0;
+    width: 100%;
+	min-width: 211px;
+	height: 40px;
+	z-index: 20;
+	background-color: white;
+	border-bottom: 1px solid rgb(200,200,200);
+}
+
+	header>div {
+		height: 100%;
+		vertical-align: top;
+		display: inline-block;
+		float: left;
+	}
+/*
+#nav_icon, #searchall, #addproject {
+	border-right: 1px solid rgb(200,200,200);
+}
+
+#join a {
 	border-left: 1px solid rgb(200,200,200);
 }
+*/
 
-			header a,  #dopo_search {
-				height: 30px;
-				padding: 5px;
-				border-right: 1px solid rgb(200,200,200);
-				font-family: 'PT Sans', sans-serif;
-			 }
-
-			header a span{
-				display: inline-block;
-				height: 30px;
-				line-height: 30px; 
-				vertical-align: middle;
-			}
-
-			#searchhide span {
-				height: 15px;
-				line-height: 15px; 
-			}
-
-#logo, #dopo_search, #dopo_search input, #empty, header nav ul, header nav ul li  {
-	display:inline-block;   
-	float: left;
+#nav_icon span {
+	background: url('../icons/nav.svg') no-repeat -1px -1px scroll;
 }
 
-#logo a {
-	color: #CC181E;
-}
 
-#logo a:hover span {
-	color: white;
-}
-#dopo_search {
+#searchall {
     position: relative;
-	width: 183px;
+	width: 139px;
 	z-index: 10;
 	background: url('../icons/search.svg') no-repeat 12px 0 scroll;
 }
 
-			#searchshow, #searchhide {/*show/hide search buttons for devices with max-width: 425px*/
-				display: none;
-			}
+	/*show/hide search buttons for devices with max-width: 466px*/
+	#searchshow, #searchhide { display: none; }
 
-			#dopo_search input[type="text"] { 
-				width: 133px; 
-				height: 26px;
-			}
+	#searchall form { margin: 5px 0; }
 
-			#dopo_search input[type="submit"] { 
-				background-image: url('../icons/search.svg');
-				background-repeat: no-repeat;
-				background-position: 3px -5px;
-			    display: block;
-				width: 40px;
-				height: 30px;
-			}
+		#searchall input { float: left; }
+
+		#searchall input[type="text"] {
+			width: 108px; 
+			height: 26px;
+			border-right-width:0;
+		}
+
+		#searchall input[type="submit"] {
+			width: 30px;
+			height: 30px;
+			border-left-width:0;
+			background: url('../icons/search.svg') no-repeat 0 -5px scroll rgb(255,255,255);
+		}
+
+		#searchall input[type="submit"]:hover {
+			background-color: #CC181E;
+		}
 
 
-header nav {
-	position: relative;
-	right: 90px;/*equals to #empty width*/
+#addproject span {
+	background: url('../icons/add.svg') no-repeat 0 0 scroll;
 }
 
-			#empty {
-				width: 90px;/*equals to the left margin we want*/
-				height: 30px;/*equals to nav ul li height*/
-			}
 
-			header nav ul {
-				position: absolute;
-				overflow: hidden;
-				height: 40px;
-			}
-
-
-#nav_icon {
-	display: none;
+#logo {
 	position: absolute;
-	top: 0;
-	right: 90px;
+	left: -95px;
+	margin: 0 50%;
+	width: 195px;
+	font-size: 0;/*get rid of margin*/
+	text-align: center;
 }
+
+	#logo a:hover {
+		color: white;
+	}
+
+	#logo>a {
+		display: inline-block;
+		padding: 8px 2px 4px;
+		height: 28px;
+		text-align: center;
+		color: #CC181E;
+		font-weight: bold;
+		font-size: 22px;
+		font-family: 'PT Serif', serif;
+	}
+
+	#logo div {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-top: 2px solid #CC181E;
+	}
+
+		#logo div a {
+			display: inline-block;
+			text-align: center;
+			padding: 2px 0 4px;
+			width: 50%;
+			height: 20px;
+			font-size: 16px;
+			color: white;
+			text-shadow: -1px 1px 1px rgb(0,0,0);
+		}
+
+		#logo img {
+			display: none;
+		}
+
 
 #join {
 	position: absolute;
 	top: 0;
-	right: 0; 
+	right: 0;
 }
 
+	#join a {
+		display: inline-block;
+		float: left;
+		margin: 0;
+	}
+
+		#join a:last-child span {
+			width: 135px;
+			border-left: none;
+		}
+
+/*===============================================
+                 NAVIGATION
+===============================================*/
+
+#main {
+	display: none; 
+	position: fixed;
+	top: 41px;
+	left: 0;
+	width: 219px;
+	z-index: 12;
+	border-right: 1px solid rgb(200,200,200);
+	background-color: rgb(240,240,240);
+}
+
+		#main li {
+			border-bottom: 1px solid rgb(200,200,200);
+		}
+
+			#main li a {
+				line-height: 1.2em;
+				padding: 0.25em 0.5em;
+			}
+
+		#main p {
+			position: absolute;
+			bottom: 45px;
+			left: 5px;
+			width: 216px;
+			font-size: 12px;
+		}
+
+		#main p a {	
+			display: inline;
+			font-size: 12px;
+		}
+
+#navtarget:target {
+	margin-bottom: 0;
+}
+
+#navtarget:target #searchall,
+#navtarget:target #searchall a,
+#navtarget:target #addproject a {
+	background-color: rgb(240,240,240);
+}
+
+#navtarget:target #addproject {
+	border-right: 1px solid rgb(200,200,200);
+}
+
+#navtarget:target #addproject a:hover,
+#navtarget:target #searchall a:hover {
+	background-color: #CC181E;
+}
+
+	#navtarget:target #wrapper {
+		margin-left: 219px;
+	}
+
+	#navtarget:target #main  { display: inline-block; } 
+	#navtarget:target .footer_cont { display: none; }
+
+/*===============================================
+                 CONTENT
+===============================================*/
+
+.tags p, .tags a {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+    margin: 2px 0 0 2px;
+    padding: 2px;
+    font-size: 12px;
+	background-color: rgb(247,247,247);
+	border: 1px solid rgb(200,200,200);
+}
+
+.tags a { background-color: white; }
+
+/*PROGRESS, finish later*/
+.progress {
+	border-top: 1px solid rgb(200,200,200);
+	border-bottom: 1px solid rgb(200,200,200);
+	background-color: white;
+}
+
+	.progress span {
+		display: inline-block;
+	    padding: 5px 0;
+	}
+
+	.gathered {
+		border-right: 1px solid rgb(200,200,200);
+		background-color: #CC181E;
+		color: white;
+	}
 
 /*===============================================
                  FOOTER
 ===============================================*/
+
 footer {
+	position: relative;
+	background-color: white;
 	padding: 5px 0;
-	border: 1px solid rgb(200,200,200);
+	border-top: 1px solid rgb(200,200,200);
 }
 
 footer h6 {
@@ -232,152 +400,196 @@ footer p {
 			border: none;
 		}
 
-/*BOX-MODEL AND ALIGNING*/
-
-header>div, #empty, header nav ul, header nav li {
-	vertical-align: top;
-	text-align: center;
-}
-
-/*WIDTH OF HEADER NAV ELEMENTS*/
-#logo a, header nav ul li a, #join a { width:80px; }
-#menushow, #menuhide, #searchshow { width: 40px; }
-
-/*===============================================
-                 CONTENT
-===============================================*/
-
-.tags p, .tags a {
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-    margin: 2px 0 0 2px;
-    padding: 2px;
-    font-size: 12px;
-	background-color: rgb(247,247,247);
-	border: 1px solid rgb(200,200,200);
-}
-
-.tags a {
-	background-color: white;
-}
-
-/*PROGRESS, finish later*/
-.progress {
-	border-top: 1px solid rgb(200,200,200);
-	border-bottom: 1px solid rgb(200,200,200);
-	background-color: white;
-}
-
-	.progress span {
-		display: inline-block;
-	    padding: 5px 0;
-	}
-
-	.gathered {
-		border-right: 1px solid rgb(200,200,200);
-		background-color: #CC181E;
-		color: white;
-	}
-
 /*===============================================
                  BREAK POINTS
 ===============================================*/
-@media screen and (max-width: 1018px) {
-	header nav { right: 140px;/*equals to #empty width*/ }
-	#empty { width: 140px;/*equals to the left margin we want*/ }
 
-	/*SHOW/HIDE NAVIGATION ICON*/
-	#nav_icon .icon {
-		background: url('../icons/nav.svg') no-repeat 0 0 scroll;
+
+@media screen and (max-width: 610px) {
+	/*===header===*/
+	#logo {
+		left: 235px;
+		margin-left: 0;
+	}
+
+	#join a:last-child { display: none; }
+
+}
+
+
+@media screen and (max-width: 465px) {
+    .pushup { height: 31px; }
+
+	.icn { padding: 0; }
+
+/*===============================================
+                 HEADER
+===============================================*/
+
+	header {
 		height: 30px;
-		width: 30px;
-		display: inline-block;
-		vertical-align: middle;
+		padding: 0;
 	}
-	#nav_icon, #main:target + #nav_icon #menuhide { display: block; }
-	#menuhide, #main:target + #nav_icon #menushow { display: none; }
-	#menuhide {
-		background-color: #CC181E;
+
+	#nav_icon, #searchshow, #addproject {
+		width: 32px;
 	}
-	#main:target {
-		display: block; 
+
+	#nav_icon span {
+		background: url('../icons/nav.svg') no-repeat 0 0 scroll;
+	}
+
+	#logo {
+		left: -95px;
+		margin: 0 50%;
+	}
+
+		#logo>a {
+			padding: 3px 0 0;
+			height: 28px;
+			font-size: 20px;
+		}
+
+	#join {
+		padding: 0;
+	}
+
+		#join a { width:30px; }
+
+	/* SEARCH FORM */
+	#searchall {
+		width: 32px;
+		border: none;
+	}
+
+		#searchall form { display: none; }
+
+		#searchshow, 
+		#searchall:target #searchhide { 
+			display: inline-block;  
+			vertical-align: top;
+		}
+
+			#searchshow span { 
+				background: url('../icons/search.svg') no-repeat 1px -3px scroll;
+			}
+
+			#searchhide span {
+				height: 15px;
+				line-height: 15px; 
+			}
+
+	/* SHOW/HIDE SEARCH FORM */
+	#searchall:target {
+		position: absolute;
+		display: block;
+		vertical-align: top;
 		right: 0;
+		left: 0;
+		top:0;
+		width: 100%;
+		min-width: 224px;
+		border: 1px solid rgb(200,200,200);
+		background: rgb(240,240,240);
 	}
-		#main:target ul { 
-			position: static;
+
+		#searchall:target #searchshow { display: none; }/*switch buttons*/
+		#searchall:target #searchhide {
+			padding: 8px 0;
+			width: 40px;
+			height: 14px;
+			border-right-width: 0;
+			font-size: 12px;
+		}
+
+		#searchall:target form {
+			display: inline-block;
+			margin: 0;
+			width: 80%;
+		}
+
+			#searchall:target input { 
+				display: inline-block;
+				vertical-align: top;
+				margin: 0;
+			}
+
+			#searchall:target input[type="text"]   { width:80%; }
+
+		#searchall:target ~ #logo { display: none; }
+
+/*===============================================
+                 NAVIGATION
+===============================================*/
+
+	#navtarget:target #main { 
+		display: block;
+		top: 31px;
+		width: 163px;
+	}
+
+	#navtarget:target #wrapper { margin-left: 163px; }
+	#navtarget:target #logo div { display: none; }
+
+		#main:target ul {
 			width:100%;
 			height: 100%;
 			background-color: rgb(247,247,247);
 		}
-			#main:target ul li {
-				display: block;
-				width:100%;
-				border: 1px solid rgb(200,200,200);
-				border-bottom: none;
-			}
 
-			#main:target ul li:last-child {
-				border-bottom: 1px solid rgb(200,200,200);
-			}
-				#main:target ul li a{
-						width:100%;
-					}
+			#main:target ul li a { width:100%; }
+
+		#main p {
+			width: 155px;
+			bottom: 35px;
+		}
+
 }
 
-@media screen and (max-width: 517px) {
-	header nav { display: none; }
+
+@media screen and (max-width: 383px) {
+	#navtarget:target #main, #main p { width: 100%; }
+	#navtarget:target #wrapper { display: none; }
 }
 
-@media screen and (max-width: 425px) {
-	#nav_icon {
-		right:50px;   
-	}
-	#join a{
-		width:40px;   
-	}
-	#empty {
-		width:0;
-	}
-	/*SHOW/HIDE SEARCH FORM*/
-	#dopo_search form { display: none; }
-	#dopo_search {
-		position: absolute;
-		top:0;
-		padding: 0;
-		width:52px;
-		right:100px;
-		border: none;
-	}
-	#searchshow, #dopo_search:target #searchhide, #dopo_search:target input { 
-		display: inline-block;  
-		vertical-align: top;
-	}
-	#dopo_search:target #searchshow { display: none; }/*switch buttons*/
-	#dopo_search:target #searchhide {
-		width: 40px;
-		height: 14px;
-		padding: 8px 0;
-		border-right-width: 0;
-		font-size: 12px;
-	}
-	#dopo_search:target {
-		display: block;
-		right: 0;
+
+@media screen and (max-width: 365px) {
+	#logo {
+		position: relative;
 		left: 0;
-		width: 99%;
-		min-width: 234px;
-		height: 30px;
-		padding: 6px 0;
-		background: rgb(233,233,233);
-		border-left: 2px solid rgb(200,200,200);
+		margin: 0;
+		font-weight: normal;
 	}
-			#dopo_search:target form {
-				display: inline-block;
-				height: 30px;
-				width: 80%;
-			}
+}
 
-			#dopo_search:target input[type="text"] { width:75%; }
-			#dopo_search:target input[type="submit"] { width:20%; }
+
+@media screen and (max-width: 310px) {
+	#searchall, #addproject {
+		display: none;
+	}
+	
+	#logo {
+		position: absolute;
+		left: -95px;
+		margin: 0 50%;
+	}
+
+		#logo>a {
+			font-size: 16px;
+			padding: 6px 2px 0;
+			height: 24px;
+		}
+
+	#navtarget:target #searchall, #navtarget:target #addproject {
+		display: inline-block;
+		border-right: none;
+	}
+
+		#navtarget:target #searchall a, #navtarget:target #addproject a {
+			background-color: rgb(255,255,255);
+		}
+
+	#navtarget:target #logo {
+		display: none;
+	}
 }

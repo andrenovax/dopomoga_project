@@ -1,79 +1,74 @@
-/*=================================
-			CONTENT
-=================================*/
 
-.pcontent {
-	border-left: 1px solid rgb(200,200,200);
-	border-right: 1px solid rgb(200,200,200);
-}
-
-.pcontent nav, .i_list, .i_list li {
-	display: inline-block;
-	vertical-align: top;
+#wrapper {
+	background-image: url('../img/monaco.jpg');
+	background-size: cover;
 }
 
 /*=================================
 			FILTERS
 =================================*/
 
-.pcontent nav {
-	padding: 5px 0;
-	border-top: none;
-	border-left: none;
+#filter_sh {
+	border-bottom: 1px solid rgb(200,200,200);
 }
 
-	.pcontent nav li {
-		padding: 0 0 5px 5px;
+	#filter_sh a {
+		padding: 5px 5px 7px;
+		font-weight: bold;
+		font-family: 'PT Sans', sans-serif;
 	}
 
-		/*SHOW/HIDE BUTTONS*/
-		.show, .hide { 
-			display: none; 
-			padding-bottom: 5px;
-			}
+		/*SHOW/HIDE BUTTONS #filtershow .show { display: none; }*/
 
-		.show span, .hide span { 
+		#filter_sh span { 
 			display: inline-block;
+			padding-right: 9px;
 			width: 15px;
 			height: 15px;
-			margin-right: 5px;
-			}
+		}
 
-		.show span { background: url('../icons/show.svg') no-repeat 3px 2px scroll; }
-		.hide span { background: url('../icons/hide.svg') no-repeat 3px 2px scroll; }
+		#filter_sh #filtershow span { background: url('../icons/show.svg') no-repeat 3px 3px scroll; }
+		#filter_sh #filterhide span { background: url('../icons/hide.svg') no-repeat 3px 5px scroll; }
 
 /*=================================
 			LISTS
 =================================*/
 
-.i_list {
-	padding-bottom: 5px;
-	border-left: 1px solid rgb(200,200,200);
+.i_list li {
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0 5px 5px 0;
+	width: 31%;
+	min-width: 200px;
+	background: rgb(233,233,233);
 }
 
-	.i_list li {
-		position: relative;
-		width: 31%;
-		min-width: 200px;
-		margin: 5px 0.5% 0;
-		border: 1px solid rgb(200,200,200);
-		background: rgb(233,233,233);
-	}
+.listWrapper {
+	padding: 40px 10px;
+	background-size: cover;
+	text-align: center;
+}
 
+.listWrapper .i_list li {
+	max-width: 250px;
+}
+
+/*=================================
+			LIST ITEMS
+=================================*/
 
 /*IMAGES AND ICONS*/
-/*too big icons, solve later*/
 .im {
-	display: block;
 	height: 180px;			
 }
 
-		.im:hover {
-			background: none;
-		}
+	.im:hover {
+		background: none;
+	}
 
 .icons {
-	display: block;
 	position: absolute;
 	top: 5px;
 	right: 5px;
@@ -82,32 +77,31 @@
 	text-align: right;
 }
 
-		.icons a {
-			margin-bottom: 5px;
-		}
+	.icons a {
+		margin-bottom: 5px;
+	}
 
-		.icons .icn {
-			display: inline-block;
-			border: 1px solid rgb(200,200,200);
-			width: 50px;
-			height: 50px;
-		}
+	.icons .icn {
+		display: inline-block;
+		border: 1px solid rgb(200,200,200);
+		width: 50px;
+		height: 50px;
+	}
 
-		.icons .cptn {
-			display: block;
-			max-height: 40px;
-			word-wrap:break-word;
-		}
+	.icons .cptn {
+		display: block;
+		max-height: 40px;
+		word-wrap:break-word;
+	}
 
 /*TAGS*/
-.tags { height:45px; }
-.tags .cause { max-width: 31%; }
+.tags { height: 45px; }
+	.tags .cause { max-width: 31%; }
 
 .uptags {
 	position: absolute;
 	top: 155px;
 }
-
 
 /*TITLE, DESCR, READMORE*/
 .ititle, .idescr {
@@ -137,37 +131,28 @@
 	width: 49%;
 }
 
-.grid1o4 { width: 24%; }
-.grid3o4 { width: 74%; }
-.gridall { width: 100%; }
 
 /*======================================
            BREAK POINTS
 ======================================*/
 
-@media screen and (max-width: 564px) {
-	.i_list li {
-		width:100%;
-		padding: 0;
+
+@media screen and (max-width: 653px) {
+	#navtarget:target .i_list li {
+		width: 100%;
+		max-width: 100%;
 		border: 5px 0 0;
 	}
 }
 
-@media screen and (max-width: 425px) {
-	.pcontent nav  {
-		width:100%;
-		padding: 5px 0 0;
-		border: 0;
-		margin: 0;
+
+@media screen and (max-width: 420px) {
+	.i_list li {
+		width: 100%;
+		border: 5px 0 0;
 	}
-	 .i_list  {
-		width:99%;
-	}
-	/*SHOW/HIDE MENU*/
-	.show, .show:target + .hide { display: block; }
-	.pcontent nav ul, .show:target  { display: none; }
-	.show:target ~ ul { 
-		display: block; 
-		width:100%;
+
+	.listWrapper .i_list li {
+		max-width: 100%;
 	}
 }

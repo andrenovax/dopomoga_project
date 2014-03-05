@@ -14,7 +14,7 @@
    id="svg4557"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="nav.svg">
+   sodipodi:docname="add.svg">
   <defs
      id="defs4559" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.395603"
-     inkscape:cx="18.690031"
-     inkscape:cy="18.225063"
+     inkscape:zoom="15.836083"
+     inkscape:cx="15.524512"
+     inkscape:cy="16.843543"
      inkscape:current-layer="g4355"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -57,25 +57,18 @@
        id="g4355">
       <rect
          style="fill:#000000"
-         id="rect2986"
-         width="15"
-         height="3"
-         x="293.26495"
-         y="1.6997055" />
-      <rect
-         style="fill:#000000"
          id="rect2986-1"
          width="15"
          height="3"
-         x="293.26495"
+         x="292.26495"
          y="7.6997061" />
       <rect
          style="fill:#000000"
          id="rect2986-6"
-         width="15"
-         height="3"
-         x="293.26495"
-         y="13.699706" />
+         width="3"
+         height="15"
+         x="298.26495"
+         y="1.699706" />
     </g>
   </g>
 </svg>
