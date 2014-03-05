@@ -42,6 +42,7 @@
 		</section>
 
 		<form>
+			{% csrf_token %}
 			<section class="who">
 				<input list="ui_list" id="ui_name" placeholder="Кому допомогти?">
 				<datalist id="ui_list">
@@ -89,6 +90,7 @@
 		</section>
 
 		<form>
+			{% csrf_token %}
 			<section class="who">
 				<input list="ui_list" id="ui_name_f" placeholder="Хто допоможе?">
 				<datalist id="ui_list">
