@@ -41,7 +41,7 @@
 			<p>Знайди, кому потрібна допомога, або додай, чим можеш поділитись</p>
 		</section>
 
-		<form>
+		<form action="" method="post">
 			{% csrf_token %}
 			<section class="who">
 				<input list="ui_list" id="ui_name" placeholder="Кому допомогти?">
@@ -89,7 +89,7 @@
 			<p>Знайди, хто може допомогти, або додай, що необхідно</p>
 		</section>
 
-		<form>
+		<form action="" method="post">
 			{% csrf_token %}
 			<section class="who">
 				<input list="ui_list" id="ui_name_f" placeholder="Хто допоможе?">

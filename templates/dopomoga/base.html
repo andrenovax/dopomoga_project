@@ -34,7 +34,7 @@
 					<a href="#searchall" id="searchshow" class="icn"><span></span></a>
 					<!--show/hide search buttons for devices with max-width: 425px-->
 					<a href="#" id="searchhide"><span>cancel</span></a>
-					<form>
+					<form action="" method="post">
 						{% csrf_token %}
 						<input type="text" placeholder="Знайти...">
 						<input type="submit" value="" class="btn">
