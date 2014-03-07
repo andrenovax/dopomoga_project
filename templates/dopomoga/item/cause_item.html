@@ -16,8 +16,7 @@
 <article class="p_item">
 	<div class="grid1o2">
 	
-		<img src="{{cause.picture}}" class="im">
-
+		<img src="{{ cause.picture.url }}" class="im">
 
 		<section id="p_about">
 			<div class="name">{{cause.name}}</div>
@@ -118,7 +117,7 @@
 		<section id="comments">
 			<div class="name">COMMENTS</div>
 			<div class="group">
-			{% include 'dopomoga/comments.html' %}
+			{% include 'dopomoga/part/comments.html' %}
 			</div>
 		</section>
 

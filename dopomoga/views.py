@@ -23,7 +23,7 @@ def index(request):
     context_dict = {'project_inneed_all': project_inneed_all,
                     'project_helper_all': project_helper_all}
     try:
-        context_dict = addAuthUserDescr(request.user, context_dict)
+        context_dict = add_auth_user_descr(request.user, context_dict)
     except:
         pass
     return render(request,
@@ -41,7 +41,7 @@ def project_inneed_all(request):
     project_inneed_all = urlator(project_inneed_all)
     context_dict = {'project_inneed_all': project_inneed_all}
     try:
-        context_dict = addAuthUserDescr(request.user, context_dict)
+        context_dict = add_auth_user_descr(request.user, context_dict)
     except:
         pass
     return render(request,
@@ -469,7 +469,7 @@ def get_Place(request):
 
 def support_project(request):
     context_dict = {}
-    context_dict = addAuthUserDescr(request.user, context_dict)
+    context_dict = add_auth_user_descr(request.user, context_dict)
     itemid = None
     if request.method == 'GET':
         itemid = request.GET['itemid']
@@ -487,7 +487,7 @@ def support_project(request):
 ================================"""
 
 
-def addAuthUserDescr(user, context_dict):
+def add_auth_user_descr(user, context_dict):
     user = User.objects.get(username=user)
     try:
         userprofile = UserProfile.objects.get(user=user)

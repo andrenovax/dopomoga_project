@@ -14,16 +14,25 @@ class Migration(SchemaMigration):
             ('project', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['dopomoga.Project'])),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=128, null=True, blank=True)),
             ('descr', self.gf('django.db.models.fields.CharField')(max_length=2048, null=True, blank=True)),
-            ('pictures', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True)),
+            ('pictures', self.gf('django.db.models.fields.files.ImageField')(default='/static/img/default.jpg', max_length=100, null=True, blank=True)),
             ('date_updated', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
         ))
         db.send_create_signal(u'dopomoga', ['Review'])
 
-        # Adding model 'ProjectHelper'
-        db.create_table(u'dopomoga_projecthelper', (
-            (u'project_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['dopomoga.Project'], unique=True, primary_key=True)),
+        # Adding model 'UserInneedProfile'
+        db.create_table(u'dopomoga_userinneedprofile', (
+            (u'userprofile_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['dopomoga.UserProfile'], unique=True, primary_key=True)),
         ))
-        db.send_create_signal(u'dopomoga', ['ProjectHelper'])
+        db.send_create_signal(u'dopomoga', ['UserInneedProfile'])
+
+        # Adding M2M table for field projects_asked on 'UserInneedProfile'
+        m2m_table_name = db.shorten_name(u'dopomoga_userinneedprofile_projects_asked')
+        db.create_table(m2m_table_name, (
+            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
+            ('userinneedprofile', models.ForeignKey(orm[u'dopomoga.userinneedprofile'], null=False)),
+            ('projecthelper', models.ForeignKey(orm[u'dopomoga.projecthelper'], null=False))
+        ))
+        db.create_unique(m2m_table_name, ['userinneedprofile_id', 'projecthelper_id'])
 
         # Adding model 'ProjectInneedReview'
         db.create_table(u'dopomoga_projectinneedreview', (
@@ -50,7 +59,7 @@ class Migration(SchemaMigration):
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=128)),
             ('descr', self.gf('django.db.models.fields.CharField')(max_length=2048, blank=True)),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100, blank=True)),
+            ('picture', self.gf('django.db.models.fields.files.ImageField')(default='/static/img/default.jpg', max_length=100, blank=True)),
             ('icon', self.gf('django.db.models.fields.files.ImageField')(max_length=100, blank=True)),
         ))
         db.send_create_signal(u'dopomoga', ['Resource'])
@@ -62,7 +71,7 @@ class Migration(SchemaMigration):
             ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=128)),
             ('descr', self.gf('django.db.models.fields.CharField')(max_length=2048)),
             ('how_to_help', self.gf('django.db.models.fields.CharField')(default='', max_length=2048, null=True, blank=True)),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100, blank=True)),
+            ('picture', self.gf('django.db.models.fields.files.ImageField')(default='/static/img/default.jpg', max_length=100, blank=True)),
             ('website', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True)),
             ('phone', self.gf('django.db.models.fields.IntegerField')(default=0, null=True, blank=True)),
             ('place', self.gf('django.db.models.fields.CharField')(max_length=256)),
@@ -100,23 +109,16 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'dopomoga', ['CauseComment'])
 
-        # Adding model 'Cause'
-        db.create_table(u'dopomoga_cause', (
+        # Adding model 'Comment'
+        db.create_table(u'dopomoga_comment', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=128)),
-            ('descr', self.gf('django.db.models.fields.CharField')(max_length=2048, blank=True)),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100, blank=True)),
+            ('author', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
+            ('comment', self.gf('django.db.models.fields.CharField')(max_length=512)),
+            ('date_commented', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
+            ('votes', self.gf('django.db.models.fields.IntegerField')(default=0)),
+            ('reports', self.gf('django.db.models.fields.IntegerField')(default=0)),
         ))
-        db.send_create_signal(u'dopomoga', ['Cause'])
-
-        # Adding M2M table for field resources on 'Cause'
-        m2m_table_name = db.shorten_name(u'dopomoga_cause_resources')
-        db.create_table(m2m_table_name, (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('cause', models.ForeignKey(orm[u'dopomoga.cause'], null=False)),
-            ('resource', models.ForeignKey(orm[u'dopomoga.resource'], null=False))
-        ))
-        db.create_unique(m2m_table_name, ['cause_id', 'resource_id'])
+        db.send_create_signal(u'dopomoga', ['Comment'])
 
         # Adding model 'ProjectInneedComment'
         db.create_table(u'dopomoga_projectinneedcomment', (
@@ -138,20 +140,11 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'dopomoga', ['UserProfileComment'])
 
-        # Adding model 'UserInneedProfile'
-        db.create_table(u'dopomoga_userinneedprofile', (
-            (u'userprofile_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['dopomoga.UserProfile'], unique=True, primary_key=True)),
+        # Adding model 'ProjectHelper'
+        db.create_table(u'dopomoga_projecthelper', (
+            (u'project_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['dopomoga.Project'], unique=True, primary_key=True)),
         ))
-        db.send_create_signal(u'dopomoga', ['UserInneedProfile'])
-
-        # Adding M2M table for field projects_asked on 'UserInneedProfile'
-        m2m_table_name = db.shorten_name(u'dopomoga_userinneedprofile_projects_asked')
-        db.create_table(m2m_table_name, (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('userinneedprofile', models.ForeignKey(orm[u'dopomoga.userinneedprofile'], null=False)),
-            ('projecthelper', models.ForeignKey(orm[u'dopomoga.projecthelper'], null=False))
-        ))
-        db.create_unique(m2m_table_name, ['userinneedprofile_id', 'projecthelper_id'])
+        db.send_create_signal(u'dopomoga', ['ProjectHelper'])
 
         # Adding model 'UserProfile'
         db.create_table(u'dopomoga_userprofile', (
@@ -160,7 +153,7 @@ class Migration(SchemaMigration):
             ('first_name', self.gf('django.db.models.fields.CharField')(max_length=128, blank=True)),
             ('second_name', self.gf('django.db.models.fields.CharField')(max_length=128, blank=True)),
             ('descr', self.gf('django.db.models.fields.CharField')(max_length=2048, blank=True)),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True)),
+            ('picture', self.gf('django.db.models.fields.files.ImageField')(default='/static/img/default.jpg', max_length=100, null=True, blank=True)),
             ('website', self.gf('django.db.models.fields.URLField')(max_length=200, blank=True)),
             ('phone', self.gf('django.db.models.fields.IntegerField')(default=0, null=True, blank=True)),
             ('place', self.gf('django.db.models.fields.CharField')(max_length=256, blank=True)),
@@ -220,24 +213,34 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'dopomoga', ['ProjectHelperComment'])
 
-        # Adding model 'Comment'
-        db.create_table(u'dopomoga_comment', (
+        # Adding model 'Cause'
+        db.create_table(u'dopomoga_cause', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('author', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
-            ('comment', self.gf('django.db.models.fields.CharField')(max_length=512)),
-            ('date_commented', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
-            ('votes', self.gf('django.db.models.fields.IntegerField')(default=0)),
-            ('reports', self.gf('django.db.models.fields.IntegerField')(default=0)),
+            ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=128)),
+            ('descr', self.gf('django.db.models.fields.CharField')(max_length=2048, blank=True)),
+            ('picture', self.gf('django.db.models.fields.files.ImageField')(default='/static/img/default.jpg', max_length=100, blank=True)),
         ))
-        db.send_create_signal(u'dopomoga', ['Comment'])
+        db.send_create_signal(u'dopomoga', ['Cause'])
+
+        # Adding M2M table for field resources on 'Cause'
+        m2m_table_name = db.shorten_name(u'dopomoga_cause_resources')
+        db.create_table(m2m_table_name, (
+            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
+            ('cause', models.ForeignKey(orm[u'dopomoga.cause'], null=False)),
+            ('resource', models.ForeignKey(orm[u'dopomoga.resource'], null=False))
+        ))
+        db.create_unique(m2m_table_name, ['cause_id', 'resource_id'])
 
 
     def backwards(self, orm):
         # Deleting model 'Review'
         db.delete_table(u'dopomoga_review')
 
-        # Deleting model 'ProjectHelper'
-        db.delete_table(u'dopomoga_projecthelper')
+        # Deleting model 'UserInneedProfile'
+        db.delete_table(u'dopomoga_userinneedprofile')
+
+        # Removing M2M table for field projects_asked on 'UserInneedProfile'
+        db.delete_table(db.shorten_name(u'dopomoga_userinneedprofile_projects_asked'))
 
         # Deleting model 'ProjectInneedReview'
         db.delete_table(u'dopomoga_projectinneedreview')
@@ -263,11 +266,8 @@ class Migration(SchemaMigration):
         # Deleting model 'CauseComment'
         db.delete_table(u'dopomoga_causecomment')
 
-        # Deleting model 'Cause'
-        db.delete_table(u'dopomoga_cause')
-
-        # Removing M2M table for field resources on 'Cause'
-        db.delete_table(db.shorten_name(u'dopomoga_cause_resources'))
+        # Deleting model 'Comment'
+        db.delete_table(u'dopomoga_comment')
 
         # Deleting model 'ProjectInneedComment'
         db.delete_table(u'dopomoga_projectinneedcomment')
@@ -278,11 +278,8 @@ class Migration(SchemaMigration):
         # Deleting model 'UserProfileComment'
         db.delete_table(u'dopomoga_userprofilecomment')
 
-        # Deleting model 'UserInneedProfile'
-        db.delete_table(u'dopomoga_userinneedprofile')
-
-        # Removing M2M table for field projects_asked on 'UserInneedProfile'
-        db.delete_table(db.shorten_name(u'dopomoga_userinneedprofile_projects_asked'))
+        # Deleting model 'ProjectHelper'
+        db.delete_table(u'dopomoga_projecthelper')
 
         # Deleting model 'UserProfile'
         db.delete_table(u'dopomoga_userprofile')
@@ -305,8 +302,11 @@ class Migration(SchemaMigration):
         # Deleting model 'ProjectHelperComment'
         db.delete_table(u'dopomoga_projecthelpercomment')
 
-        # Deleting model 'Comment'
-        db.delete_table(u'dopomoga_comment')
+        # Deleting model 'Cause'
+        db.delete_table(u'dopomoga_cause')
+
+        # Removing M2M table for field resources on 'Cause'
+        db.delete_table(db.shorten_name(u'dopomoga_cause_resources'))
 
 
     models = {
@@ -351,7 +351,7 @@ class Migration(SchemaMigration):
             'descr': ('django.db.models.fields.CharField', [], {'max_length': '2048', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '128'}),
-            'picture': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
+            'picture': ('django.db.models.fields.files.ImageField', [], {'default': "'/static/img/default.jpg'", 'max_length': '100', 'blank': 'True'}),
             'resources': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'to': u"orm['dopomoga.Resource']", 'null': 'True', 'blank': 'True'})
         },
         u'dopomoga.causecomment': {
@@ -379,7 +379,7 @@ class Migration(SchemaMigration):
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '128'}),
             'phone': ('django.db.models.fields.IntegerField', [], {'default': '0', 'null': 'True', 'blank': 'True'}),
-            'picture': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
+            'picture': ('django.db.models.fields.files.ImageField', [], {'default': "'/static/img/default.jpg'", 'max_length': '100', 'blank': 'True'}),
             'place': ('django.db.models.fields.CharField', [], {'max_length': '256'}),
             'project_author': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['auth.User']"}),
             'reports': ('django.db.models.fields.IntegerField', [], {'default': '0'}),
@@ -423,7 +423,7 @@ class Migration(SchemaMigration):
             'icon': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '128'}),
-            'picture': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'})
+            'picture': ('django.db.models.fields.files.ImageField', [], {'default': "'/static/img/default.jpg'", 'max_length': '100', 'blank': 'True'})
         },
         u'dopomoga.resourcecomment': {
             'Meta': {'object_name': 'ResourceComment', '_ormbases': [u'dopomoga.Comment']},
@@ -435,7 +435,7 @@ class Migration(SchemaMigration):
             'date_updated': ('django.db.models.fields.DateField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'descr': ('django.db.models.fields.CharField', [], {'max_length': '2048', 'null': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'pictures': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'pictures': ('django.db.models.fields.files.ImageField', [], {'default': "'/static/img/default.jpg'", 'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'project': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['dopomoga.Project']"}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '128', 'null': 'True', 'blank': 'True'})
         },
@@ -457,7 +457,7 @@ class Migration(SchemaMigration):
             'first_name': ('django.db.models.fields.CharField', [], {'max_length': '128', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'phone': ('django.db.models.fields.IntegerField', [], {'default': '0', 'null': 'True', 'blank': 'True'}),
-            'picture': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'picture': ('django.db.models.fields.files.ImageField', [], {'default': "'/static/img/default.jpg'", 'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'place': ('django.db.models.fields.CharField', [], {'max_length': '256', 'blank': 'True'}),
             'projects_supported': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'to': u"orm['dopomoga.ProjectInneed']", 'null': 'True', 'blank': 'True'}),
             'reports': ('django.db.models.fields.IntegerField', [], {'default': '0'}),
