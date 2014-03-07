@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     # auth user
     url(r'^register/$', views.register, name='register'),
     url(r'^login/$', views.user_login, name='user_login'),
-    url(r'^logout/$', views.user_logout, name='user_logout'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
     # ajax
     url(r'^get_UserInneed/$', views.get_UserInneed, name='get_UserInneed'),
     url(r'^get_Resource/$', views.get_Resource, name='get_Resource'),

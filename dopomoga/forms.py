@@ -1,37 +1,45 @@
 from django import forms
 from dopomoga.models import *
 from django.contrib.auth.models import User
-from django.utils import timezone
+# from django.utils import timezone
+
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Username'}))
     email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Email'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
+    
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
 
+
 class UserProfileForm(forms.ModelForm):
     # description
-    first_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'placeholder': 'First Name'}), required=False)
-    second_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'placeholder': 'Second Name'}), required=False)
+    first_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'placeholder': 'First Name'}))
+    second_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'placeholder': 'Second Name'}))
     picture = forms.ImageField(help_text="Your photo", required=False)
-    descr = forms.CharField(max_length=2048, widget=forms.Textarea(attrs={'placeholder': 'Tell us more about you', 'style':'resize:none;width:200px','rows':'10'}), required=False)
-    website = forms.URLField(widget=forms.TextInput(attrs={'placeholder': 'Website'}), required=False)
-    phone = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Phone'}), required=False)
-    place = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'City'}), required=False)
+    descr = forms.CharField(max_length=2048, widget=forms.Textarea(attrs={'placeholder': 'Tell us more about you',
+                                                                          'style': 'resize:none;width:200px',
+                                                                          'rows': '10'}))
+    website = forms.URLField(widget=forms.TextInput(attrs={'placeholder': 'Website'}))
+    phone = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Phone'}))
+    place = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'City'}))
     # characteristics and filters
-    resources = forms.ModelMultipleChoiceField(queryset=Resource.objects.all(),widget=forms.CheckboxSelectMultiple()) # Resource,support and needs
-    causes = forms.ModelMultipleChoiceField(queryset=Cause.objects.all(),widget=forms.CheckboxSelectMultiple()) # support and needs    
+    resources = forms.ModelMultipleChoiceField(queryset=Resource.objects.all(), widget=forms.CheckboxSelectMultiple()) # Resource,support and needs
+    causes = forms.ModelMultipleChoiceField(queryset=Cause.objects.all(), widget=forms.CheckboxSelectMultiple()) # support and needs    
 
     #LATER
-    #AUTO? date_joined = models.DateField(auto_now_add=True)
     #votes = models.IntegerField(default=0)
     #reports = models.IntegerField(default=0) #boolean+number of reports to prioritize the problem
 
     class Meta:
         model = UserProfile
         fields = ['first_name', 'second_name', 'picture', 'descr', 'website', 'phone', 'place', 'resources', 'causes']
+
+    def __init__(self, *args, **kwargs):
+        for key in self.fields:
+            self.fields[key].required = False
 
 """
 def clean(self):

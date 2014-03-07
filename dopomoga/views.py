@@ -361,7 +361,7 @@ def register(request):
             password = request.POST['password']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('/dopomoga/')
+            return redirect(reverse('index'))
         else:
             return render(request,
                           'dopomoga/login.html',
@@ -384,7 +384,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 logged = True
-                return redirect('/dopomoga/')
+                return redirect(reverse('index'))
             else:
                 return HttpResponse("Activate your account to sign in")
         else:
@@ -394,13 +394,6 @@ def user_login(request):
         return render(request,
                       'dopomoga/login.html',
                       {'logged': logged, 'user_form': user_form})
-
-
-#LOGOUT
-@login_required
-def user_logout(request):
-    logout(request)
-    return redirect('/dopomoga/')
 
 
 """================================

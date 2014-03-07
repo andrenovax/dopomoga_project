@@ -2,30 +2,30 @@
 
 
 {% block styles %}
-	{% load static %}
-	<link href="{% static 'css/index.css' %}" rel="stylesheet">
-	<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
 {% endblock %}
 
 
 {% block page_name %}
-	<a href="/dopomoga/"><img src="#" alt="">ДОПОМОГА</a>
+    <a href="{% url 'index' %}"><img src="#" alt="">ДОПОМОГА</a>
 
-	<div>
-		<a href="/dopomoga/project_inneed_all">надати</a>
-		<a href="/dopomoga/project_helper_all">знайти</a>
-	</div>
+    <div>
+        <a href="{% url 'project_inneed_all' %}">надати</a>
+        <a href="{% url 'project_helper_all' %}">знайти</a>
+    </div>
 {% endblock %}
 
 
 {% block scripts %} 
-	{% load static %}
-	<script src="{% static 'js/index.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
 
 
 {% block filters %}
-	{% include 'dopomoga/part/filters.html' %}
+    {% include 'dopomoga/part/filters.html' %}
 {% endblock %}
 
 
@@ -35,99 +35,99 @@
 [projects in need], [projects helpers]
 -->
 <article class="intro border">
-	<div class="marger">
-		<section class="goal">
-			<h1>Допоможи людям</h1>
-			<p>Знайди, кому потрібна допомога, або додай, чим можеш поділитись</p>
-		</section>
+    <div class="marger">
+        <section class="goal">
+            <h1>Допоможи людям</h1>
+            <p>Знайди, кому потрібна допомога, або додай, чим можеш поділитись</p>
+        </section>
 
-		<form action="" method="post">
-			{% csrf_token %}
-			<section class="who">
-				<input list="ui_list" id="ui_name" placeholder="Кому допомогти?">
-				<datalist id="ui_list">
-				</datalist>
-			</section>
-			<section class="picker">
-				<section>
-					<input type="text" id="resource_name" value="" placeholder="чим">
-					<ul>
-					</ul>
-				</section>
+        <form action="" method="post">
+            {% csrf_token %}
+            <section class="who">
+                <input list="ui_list" id="ui_name" placeholder="Кому допомогти?">
+                <datalist id="ui_list">
+                </datalist>
+            </section>
+            <section class="picker">
+                <section>
+                    <input type="text" id="resource_name" value="" placeholder="чим">
+                    <ul>
+                    </ul>
+                </section>
 
-				<section>
-					<input type="text" id="cause_name" value="" placeholder="напрям">
-					<ul>
-					</ul>
-				</section>
+                <section>
+                    <input type="text" id="cause_name" value="" placeholder="напрям">
+                    <ul>
+                    </ul>
+                </section>
 
-				<section>
-					<input type="text" id="place_name" value="" placeholder="де">
-					<ul>
-					<!--LATER {% include 'dopomoga/part/sugg.html' with item_list=place_list%}-->
-					</ul>
-				</section>
-			</section>
+                <section>
+                    <input type="text" id="place_name" value="" placeholder="де">
+                    <ul>
+                    <!--LATER {% include 'dopomoga/part/sugg.html' with item_list=place_list%}-->
+                    </ul>
+                </section>
+            </section>
 
-			<section class="submitter">
-				<input type="submit" class="btn" value="знайти"><!--hiding extra margin between buttons
-			 --><input type="submit" class="btn" value="додати">
-			</section>
-		</form>
+            <section class="submitter">
+                <input type="submit" class="btn" value="знайти"><!--hiding extra margin between buttons
+             --><input type="submit" class="btn" value="додати">
+            </section>
+        </form>
 
-		<article class="pcontent">
-			{% include 'dopomoga/list/project_inneed_all.html' %}
-		</article>
-	</div>
+        <article class="pcontent">
+            {% include 'dopomoga/list/project_inneed_all.html' %}
+        </article>
+    </div>
 </article>
 
 
 <article class="intro">
-	<div class="marger">
-		<section class="goal">
-			<h1>Отримай допомогу</h1>
-			<p>Знайди, хто може допомогти, або додай, що необхідно</p>
-		</section>
+    <div class="marger">
+        <section class="goal">
+            <h1>Отримай допомогу</h1>
+            <p>Знайди, хто може допомогти, або додай, що необхідно</p>
+        </section>
 
-		<form action="" method="post">
-			{% csrf_token %}
-			<section class="who">
-				<input list="ui_list" id="ui_name_f" placeholder="Хто допоможе?">
-				<datalist id="ui_list">
-				</datalist>
-			</section>
-			<section class="picker">
-				<section>
-					<input type="text" id="resource_name_f" value="" placeholder="що">
-					<ul>
-					</ul>
-				</section>
+        <form action="" method="post">
+            {% csrf_token %}
+            <section class="who">
+                <input list="ui_list" id="ui_name_f" placeholder="Хто допоможе?">
+                <datalist id="ui_list">
+                </datalist>
+            </section>
+            <section class="picker">
+                <section>
+                    <input type="text" id="resource_name_f" value="" placeholder="що">
+                    <ul>
+                    </ul>
+                </section>
 
-				<section>
-					<input type="text" id="cause_name_f" value="" placeholder="напрям">
-					<ul>
-					</ul>
-				</section>
+                <section>
+                    <input type="text" id="cause_name_f" value="" placeholder="напрям">
+                    <ul>
+                    </ul>
+                </section>
 
-				<section>
-					<input type="text" id="place_name_f" value="" placeholder="де">
-					<ul>
-					<!--LATER {% include 'dopomoga/part/sugg.html' with item_list=place_list%}-->
-					</ul>
-				</section>
-			</section>
+                <section>
+                    <input type="text" id="place_name_f" value="" placeholder="де">
+                    <ul>
+                    <!--LATER {% include 'dopomoga/part/sugg.html' with item_list=place_list%}-->
+                    </ul>
+                </section>
+            </section>
 
-			<section class="submitter">
-				<input type="submit" class="btn" value="знайти"><!--hiding extra margin between buttons
-			 --><input type="submit" class="btn" value="додати">
-			</section>
-		</form>
+            <section class="submitter">
+                <input type="submit" class="btn" value="знайти"><!--hiding extra margin between buttons
+             --><input type="submit" class="btn" value="додати">
+            </section>
+        </form>
 
-		<article class="pcontent">
-			{% include 'dopomoga/list/project_helper_all.html' %}
-		</article>
-		<div class="ipushdown"></div>
-	</div>
+        <article class="pcontent">
+            {% include 'dopomoga/list/project_helper_all.html' %}
+        </article>
+        <div class="ipushdown"></div>
+    </div>
 </article>
 
 

@@ -1,9 +1,9 @@
 .pushdown {
-	display: none;
+    display: none;
 }
 
 .ipushdown {
-	height: 58px;
+    height: 58px;
 }
 
 /*===============================================
@@ -11,128 +11,128 @@
 ===============================================*/
 
 .intro {
-	padding: 7% 5px;
-	background-image: url('../img/monaco.jpg');
-	background-size: cover;
+    padding: 7% 5px;
+    background-image: url('../img/monaco.jpg');
+    background-size: cover;
 }
 
 .border {
-	border-bottom: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .marger {
-	margin: 0 auto;
-	max-width: 663px;
+    margin: 0 auto;
+    max-width: 663px;
 }
 
 /*===SLOGAN===*/
 
 .goal {
-	margin: 0;
+    margin: 0;
 }
 
 h1, .goal p {
-	font-weight: 800;
-	color: rgba(255,255,255,1);
-	text-shadow: -0.02em -0.02em 0 rgb(57,57,57);
+    font-weight: 800;
+    color: rgba(255,255,255,1);
+    text-shadow: -0.02em -0.02em 0 rgb(57,57,57);
 }
 
 h1 {
-	font-size: 38px;
-	display: inline-block;
+    font-size: 38px;
+    display: inline-block;
 }
 
 .goal p {
-	font-size: 20px;
-	font-family: 'PT Sans', sans-serif;
-	letter-spacing: -1px;
+    font-size: 20px;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: -1px;
 }
 
 /*===SEARCH FORM===*/
 .intro form {
-	background: rgba(233,233,233,0.75);
-	padding: 4px 4px 0;
-	margin: 7px 0;
+    background: rgba(233,233,233,0.75);
+    padding: 4px 4px 0;
+    margin: 7px 0;
 }
 
 .intro form section, .submitter>* {
-	display: inline-block;
-	vertical-align: top;
-	margin-bottom: 2px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2px;
 }
 
 .intro form section section {
-	position: relative;
+    position: relative;
 }
 
 .intro section ul {
-	background-color: rgba(200,200,200,0.75);
-	position: absolute;
-	width: 175px;
-	max-height: 148px;
-	overflow: auto;
-	border: 4px solid rgba(200,200,200,0.75);
-	border-top: 4px solid rgba(200,200,200,0);
+    background-color: rgba(200,200,200,0.75);
+    position: absolute;
+    width: 175px;
+    max-height: 148px;
+    overflow: auto;
+    border: 4px solid rgba(200,200,200,0.75);
+    border-top: 4px solid rgba(200,200,200,0);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
     z-index: 100;
 }
 
 .intro section li {
-	position: relative;
-	top: 0;
-	min-height: 30px;
+    position: relative;
+    top: 0;
+    min-height: 30px;
 }
 
 .intro section li:nth-child(even) {
-	background-color: white;
+    background-color: white;
 }
 
 input:checked + label {
-	background-color: #CC181E;
-	}
+    background-color: #CC181E;
+    }
 
 .noth {
-	padding: 5px;
+    padding: 5px;
 }
 
 .intro li label {
-	position: absolute;
-	display: inline-block;
-	top: 0;
-	left: 0;
-	padding: 2px 0 0 20px;
-	width: 87%;
-	height: 90%;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    padding: 2px 0 0 20px;
+    width: 87%;
+    height: 90%;
 }
 
 .who input{
-	width: 182px;
-	height: 34px;
-	margin-bottom: 2px;
+    width: 182px;
+    height: 34px;
+    margin-bottom: 2px;
 }
 .picker section>input{
-	width: 88px;
-	height: 34px;
+    width: 88px;
+    height: 34px;
 }
 .submitter input {
-	width: 90px;
-	height: 38px;
-	background-color: #CC181E;
-	color: white;
-	border-color: transparent;
+    width: 90px;
+    height: 38px;
+    background-color: #CC181E;
+    color: white;
+    border-color: transparent;
 }
 
-		.submitter input:hover {
-			outline: #CC181E solid 2px;
-		}
-		.submitter input:first-child {
-			margin-right: 4px;
-		}
-		.submitter div {
-			width: 0;
-			height: 0;
-		}
+        .submitter input:hover {
+            outline: #CC181E solid 2px;
+        }
+        .submitter input:first-child {
+            margin-right: 4px;
+        }
+        .submitter div {
+            width: 0;
+            height: 0;
+        }
 
 /*===============================================
                  BREAK POINTS
@@ -140,52 +140,52 @@ input:checked + label {
 
 
 @media screen and (max-width: 699px) {
-	#navtarget:target .submitter { width: 100%; }
-	#navtarget:target h1 { font-size: 26px; }
-	#navtarget:target .goal p { font-size: 18px; }
+    #navtarget:target .submitter { width: 100%; }
+    #navtarget:target h1 { font-size: 26px; }
+    #navtarget:target .goal p { font-size: 18px; }
 }
 
 
 @media screen and (max-width: 466px) {
-	.submitter { width: 100%; }
-	h1 { font-size: 26px; }
-	.goal p { font-size: 18px; }
+    .submitter { width: 100%; }
+    h1 { font-size: 26px; }
+    .goal p { font-size: 18px; }
 }
 
 
 @media screen and (max-width: 544px) {
-	#navtarget:target .who input, #navtarget:target .picker section>input, #navtarget:target .submitter input,
-	#navtarget:target .picker, #navtarget:target .who, #navtarget:target .picker section,
-	#navtarget:target .intro ul {
-		width: 100%;
-	}
+    #navtarget:target .who input, #navtarget:target .picker section>input, #navtarget:target .submitter input,
+    #navtarget:target .picker, #navtarget:target .who, #navtarget:target .picker section,
+    #navtarget:target .intro ul {
+        width: 100%;
+    }
 
-	#navtarget:target .submitter input:first-child { margin-bottom: 4px;}
-	#navtarget:target .intro section ul {
-		border-width: 0;
-		margin-left: 1px;
-		position: relative;
-		background-color: transparent;
-	}
+    #navtarget:target .submitter input:first-child { margin-bottom: 4px;}
+    #navtarget:target .intro section ul {
+        border-width: 0;
+        margin-left: 1px;
+        position: relative;
+        background-color: transparent;
+    }
 
-	#navtarget:target .intro { padding: 30px 5px; }
+    #navtarget:target .intro { padding: 30px 5px; }
 }
 
 
 @media screen and (max-width: 324px) {
-	.who input, .picker section>input, .submitter input,
-	.picker, .who, .picker section,
-	.intro ul {
-		width: 100%;
-	}
+    .who input, .picker section>input, .submitter input,
+    .picker, .who, .picker section,
+    .intro ul {
+        width: 100%;
+    }
 
-	.submitter input:first-child { margin-bottom: 4px;}
-	.intro section ul {
-		border-width: 0;
-		margin-left: 1px;
-		position: relative;
-		background-color: transparent;
-	}
+    .submitter input:first-child { margin-bottom: 4px;}
+    .intro section ul {
+        border-width: 0;
+        margin-left: 1px;
+        position: relative;
+        background-color: transparent;
+    }
 
-	.intro { padding: 30px 5px; }
+    .intro { padding: 30px 5px; }
 }

@@ -6,166 +6,167 @@
 
     <head>
         <title>{% block title %} Dopomoga. Home {% endblock %}</title>
-		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-		<meta name="viewport" content="width=device-width">
-		{% load static %}
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <meta name="viewport" content="width=device-width">
+        {% load static %}
         <link href="{% static 'css/reset.css' %}" rel="stylesheet" media="screen"/>
         <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
         <link href='http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
         <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
-		<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+        <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
         
-		{% block styles %}
-		<!--  external styles on other pages -->
-		{% endblock %}
+        {% block styles %}
+        <!--  external styles on other pages -->
+        {% endblock %}
 
     </head>
 
     <body>
-	    <div id="navtarget">
-			<header>
-				<!--===MINIMUM===logo, search, navigation, about ===EXTRA [LATER]===== add project, About drop, footer big nav-->
-				<div id="nav_icon">
-					<a href="#navtarget" class="show icn"><span></span></a>
-					<a href="#" class="hide icn"><span></span></a>
-				</div>
+        <div id="navtarget">
+            <header>
+                <!--===MINIMUM===logo, search, navigation, about ===EXTRA [LATER]===== add project, About drop, footer big nav-->
+                <div id="nav_icon">
+                    <a href="#navtarget" class="show icn"><span></span></a>
+                    <a href="#" class="hide icn"><span></span></a>
+                </div>
 
-				<div id="searchall">
-					<a href="#searchall" id="searchshow" class="icn"><span></span></a>
-					<!--show/hide search buttons for devices with max-width: 425px-->
-					<a href="#" id="searchhide"><span>cancel</span></a>
-					<form action="" method="post">
-						{% csrf_token %}
-						<input type="text" placeholder="Знайти...">
-						<input type="submit" value="" class="btn">
-					</form>
-				</div>
+                <div id="searchall">
+                    <a href="#searchall" id="searchshow" class="icn"><span></span></a>
+                    <!--show/hide search buttons for devices with max-width: 425px-->
+                    <a href="#" id="searchhide"><span>cancel</span></a>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Знайти...">
+                        <input type="submit" value="" class="btn">
+                    </form>
+                </div>
 
-				<div id="addproject">
-					<a href="#" class="icn"><span></span></a> 
-				</div>
+                <div id="addproject">
+                    <a href="#" class="icn"><span></span></a> 
+                </div>
 
-				<div id="logo">
-					{% block page_name %}
-						<a href="/dopomoga/"><img src="#" alt="">ДОПОМОГА</a>
-					{% endblock %}
-				</div>
+                <div id="logo">
+                    {% block page_name %}
+                        <a href="{% url 'index' %}"><img src="#" alt="">ДОПОМОГА</a>
+                    {% endblock %}
+                </div>
 
-				<!--login / logout-->
-				<div id="join">
-					<a href="/dopomoga/login" class="icn"><span>img</span></a>
-			        {% if user.is_authenticated %}
-						<a href="/dopomoga/logout" class="icn"><span>{{user.username}}, вийти</span></a>
-					{%else%}
-						<a href="/dopomoga/login" class="icn"><span>приєднатися</span></a>
-			        {% endif %}
-				</div>
-			</header>
+                <!--login / logout-->
+                <div id="join">
+                    {% if user.is_authenticated %}
+                        <a href="#" class="icn"><span>img</span></a>
+                        <a href="{% url 'django.contrib.auth.views.logout' %}" class="icn"><span>{{user.username}}, вийти</span></a>
+                    {%else%}
+                        <a href="{% url 'user_login' %}" class="icn"><span>img</span></a>
+                        <a href="{% url 'user_login' %}" class="icn"><span>приєднатися</span></a>
+                    {% endif %}
+                </div>
+            </header>
 
-			<nav id="main">
-				<!--show/hide dropping navigation buttons-->
-				<ul>
-					<li><a href="/dopomoga/">Головна</a></li>
-					<li><a href="/dopomoga/project_inneed_all">Допомогти</a></li>
-					<li><a href="/dopomoga/project_helper_all">Знайти допомогу</a></li>
-					<li><a href="/dopomoga/userhelper_all">Благодійники</a></li>
-					<li><a href="/dopomoga/userinneed_all">Потребують допомоги</a></li>
-					<li><a href="/dopomoga/resource_all">Ресурси</a></li>
-					<li><a href="/dopomoga/cause_all">Напрямки</a></li>
-					<li><a href="/dopomoga/about">Про "Допомогу"</a>
-						<!--LATER
-						<ul>
-							<li><a href="#" id="FAQ">FAQ</a></li>
-							<li><a href="#" id="contacts">Contacts</a></li>
-							<li><a href="#" id="how">How does dopomoga work</a></li>
-						</ul>
-						-->
-					</li>
-				</ul>
+            <nav id="main">
+                <!--show/hide dropping navigation buttons-->
+                <ul>
+                    <li><a href="{% url 'index' %}">Головна</a></li>
+                    <li><a href="{% url 'project_inneed_all' %}">Допомогти</a></li>
+                    <li><a href="{% url 'project_helper_all' %}">Знайти допомогу</a></li>
+                    <li><a href="{% url 'userhelper_all' %}">Благодійники</a></li>
+                    <li><a href="{% url 'userinneed_all' %}">Потребують допомоги</a></li>
+                    <li><a href="{% url 'resource_all' %}">Ресурси</a></li>
+                    <li><a href="{% url 'cause_all' %}">Напрямки</a></li>
+                    <li><a href="{% url 'about' %}">Про "Допомогу"</a>
+                        <!--LATER
+                        <ul>
+                            <li><a href="#" id="FAQ">FAQ</a></li>
+                            <li><a href="#" id="contacts">Contacts</a></li>
+                            <li><a href="#" id="how">How does dopomoga work</a></li>
+                        </ul>
+                        -->
+                    </li>
+                </ul>
 
-				{% block filters %}
-				{% endblock %}
+                {% block filters %}
+                {% endblock %}
 
-				<p id="copyright">
-					&copy; 2014 Dopomoga Non-Profit Organization. All Rights Reserved. Designed by <a href="#">Andrey Novak</a>
-				</p>
-			</nav>
+                <p id="copyright">
+                    &copy; 2014 Dopomoga Non-Profit Organization. All Rights Reserved. Designed by <a href="#">Andrey Novak</a>
+                </p>
+            </nav>
 
-	    	<div id="wrapper">
-				<div class="pushup"></div>
+            <div id="wrapper">
+                <div class="pushup"></div>
 
-				{% block content %}
-				{% endblock %}
+                {% block content %}
+                {% endblock %}
 
-				<!--push footer to the bottom
-				<div class="pushdown"></div>-->
+                <!--push footer to the bottom
+                <div class="pushdown"></div>-->
 
-				<div class="pushdown"></div>
-			</div>
+                <div class="pushdown"></div>
+            </div>
 
-			<div class="footer_cont">
-				<footer>
-					<nav>
-						<ul>
-							<li><h6><a href="#">Домашня</a></h6>
-							<!--
-								<ul>
-									<li><a href="/dopomoga/project_inneed_all"  >Help People</a></li>
-									<li><a href="/dopomoga/project_helper_all">Find Help</a></li>
-									<li><a href="/dopomoga/resource_all">resources</a></li>
-									<li><a href="/dopomoga/cause_all">causes</a></li>
-									<li><a href="/dopomoga/userhelper_all">helpers</a></li>
-									<li><a href="/dopomoga/userinneed_all">people in need</a></li>
-									<li><a href="/dopomoga/about">ABOUT</a></li>
-								</ul>
-							-->
-							</li>
-							<li><h6><a href="#">FAQ</a></h6>
-							<!--
-								<ul>
-									<li><a href="#">q1</a></li>
-									<li><a href="#">q2</a></li>
-									<li><a href="#">q3</a></li>
-									<li><a href="#">q4</a></li>
-									<li><a href="#">q5</a></li>
-								</ul>
-							-->
-							</li>
-							<li><h6><a href="#">Контакти</a></h6>
-							<!--
-								<ul>
-									<li><a href="#">vk</a></li>
-									<li><a href="#">facebook</a></li>
-									<li><a href="#">email</a></li>
-									<li><a href="#">phone</a></li>
-									<li><a href="#">address</a></li>
-								</ul>
-							-->
-							</li>
-							<li><h6><a href="#">Про "організацію"</a></h6>
-							<!--
-								<ul>
-									<li><a href="#">Story</a></li>
-									<li><a href="#">Team</a></li>
-									<li><a href="#">Get involved</a></li>
-								</ul>
-							-->
-							</li>
-							<li><h6><a href="#">Про "Допомогу"</a></h6>
-							<!--
-								<ul>
-									<li><a href="#">How does "Dopomoga" work?</a></li>
-									<li><a href="#">How to find help?</a></li>
-									<li><a href="#">How to help people?</a></li>
-								</ul>
-							-->
-							</li>
-						</ul>
-					</nav>
-					<p>&copy; 2014 Dopomoga Non-Profit Organization. All Rights Reserved. Designed by <a href="#">Andrey Novak</a></p>
-				</footer>
-			</div>
-		</div>
-		{% block scripts %} {% endblock %}
+            <div class="footer_cont">
+                <footer>
+                    <nav>
+                        <ul>
+                            <li><h6><a href="#">Домашня</a></h6>
+                            <!--
+                                <ul>
+                                    <li><a href="/dopomoga/project_inneed_all"  >Help People</a></li>
+                                    <li><a href="/dopomoga/project_helper_all">Find Help</a></li>
+                                    <li><a href="/dopomoga/resource_all">resources</a></li>
+                                    <li><a href="/dopomoga/cause_all">causes</a></li>
+                                    <li><a href="/dopomoga/userhelper_all">helpers</a></li>
+                                    <li><a href="/dopomoga/userinneed_all">people in need</a></li>
+                                    <li><a href="/dopomoga/about">ABOUT</a></li>
+                                </ul>
+                            -->
+                            </li>
+                            <li><h6><a href="#">FAQ</a></h6>
+                            <!--
+                                <ul>
+                                    <li><a href="#">q1</a></li>
+                                    <li><a href="#">q2</a></li>
+                                    <li><a href="#">q3</a></li>
+                                    <li><a href="#">q4</a></li>
+                                    <li><a href="#">q5</a></li>
+                                </ul>
+                            -->
+                            </li>
+                            <li><h6><a href="#">Контакти</a></h6>
+                            <!--
+                                <ul>
+                                    <li><a href="#">vk</a></li>
+                                    <li><a href="#">facebook</a></li>
+                                    <li><a href="#">email</a></li>
+                                    <li><a href="#">phone</a></li>
+                                    <li><a href="#">address</a></li>
+                                </ul>
+                            -->
+                            </li>
+                            <li><h6><a href="#">Про "організацію"</a></h6>
+                            <!--
+                                <ul>
+                                    <li><a href="#">Story</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Get involved</a></li>
+                                </ul>
+                            -->
+                            </li>
+                            <li><h6><a href="#">Про "Допомогу"</a></h6>
+                            <!--
+                                <ul>
+                                    <li><a href="#">How does "Dopomoga" work?</a></li>
+                                    <li><a href="#">How to find help?</a></li>
+                                    <li><a href="#">How to help people?</a></li>
+                                </ul>
+                            -->
+                            </li>
+                        </ul>
+                    </nav>
+                    <p>&copy; 2014 Dopomoga Non-Profit Organization. All Rights Reserved. Designed by <a href="#">Andrey Novak</a></p>
+                </footer>
+            </div>
+        </div>
+        {% block scripts %} {% endblock %}
     </body>
 </html>

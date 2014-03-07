@@ -2,148 +2,148 @@
 
 
 {% block styles %}
-	{% load static %}
-	<link href="{% static 'css/item.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'css/item.css' %}" rel="stylesheet">
 {% endblock %}
 
 
 {% block page_name %}
-	<a href="{% url 'index' %}"><img src="#" alt="">ДОПОМОГА</a>
+    <a href="{% url 'index' %}"><img src="#" alt="">ДОПОМОГА</a>
 {% endblock %}
 
 
 {% block content %}
 <article class="p_item">
-	<div class="grid1o2">
-	
-		<img src="{{ cause.picture.url }}" class="im">
+    <div class="grid1o2">
+    
+        <img src="{{ cause.picture.url }}" class="im">
 
-		<section id="p_about">
-			<div class="name">{{cause.name}}</div>
-			<div id="p_about_d" class="group">
-				<div class="descr">
-					<p>{{cause.descr}}</p>
-				</div>
-				<div><a href="#p_about_d" class="show btn">more...</a></div>
-				<div><a href="#" class="hide btn">...less</a></div>
-			</div>
-		</section>
+        <section id="p_about">
+            <div class="name">{{ cause.name }}</div>
+            <div id="p_about_d" class="group">
+                <div class="descr">
+                    <p>{{ cause.descr }}</p>
+                </div>
+                <div><a href="#p_about_d" class="show btn">more...</a></div>
+                <div><a href="#" class="hide btn">...less</a></div>
+            </div>
+        </section>
 
-		<section id="pr_in">
-			<div class="name">PROJECTS IN NEED</div>
-			<div class="group">
-				<div class="tags">
-				{% if project_inneed_all %}
-					{% for project in project_inneed_all %}
-						<a href="/dopomoga/project_inneed_all/{{project}}">{{project}}</a>
-					{% endfor %}
-				{% endif %}
-				</div>
-			</div>
-		</section>
+        <section id="pr_in">
+            <div class="name">PROJECTS IN NEED</div>
+            <div class="group">
+                <div class="tags">
+                {% if project_inneed_all %}
+                    {% for project in project_inneed_all %}
+                        <a href="{% url 'project_inneed_item' project_name_url=project.url %}">{{ project }}</a>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+        </section>
 
-		<section id="pr_sh">
-			<div class="name">PROJECTS SHARE</div>
-			<div class="group">
-				<div class="tags">
-				{% if project_helper_all %}
-					{% for project in project_helper_all %}
-						<a href="/dopomoga/project_helper_all/{{project}}">{{project}}</a>
-					{% endfor %}
-				{% endif %}
-				</div>
-			</div>
-		</section>
+        <section id="pr_sh">
+            <div class="name">PROJECTS SHARE</div>
+            <div class="group">
+                <div class="tags">
+                {% if project_helper_all %}
+                    {% for project in project_helper_all %}
+                        <a href="{% url 'project_helper_item' project_name_url=project.url %}">{{ project }}</a>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+        </section>
 
-		<section id="us_in">
-			<div class="name">USERS IN NEED</div>
-			<div class="group">
-				<div class="tags">
-				{% if users_inneed %}
-					{% for user in users_inneed %}
-						<a href="/dopomoga/userinneed_all/{{user}}">{{user}}</a>
-					{% endfor %}
-				{% endif %}
-				</div>
-			</div>
-		</section>
+        <section id="us_in">
+            <div class="name">USERS IN NEED</div>
+            <div class="group">
+                <div class="tags">
+                {% if users_inneed %}
+                    {% for user in users_inneed %}
+                        <a href="{% url 'user_inneed_item' user_name_url=user %}">{{ user }}</a>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+        </section>
 
-		<section id="us_sup">
-			<div class="name">USERS SUPPORT</div>
-			<div class="group">
-				<div class="tags">
-				{% if users_supported %}
-					{% for user in users_supported %}
-						<a href="/dopomoga/userhelper_all/{{user}}">{{user}}</a>
-					{% endfor %}
-				{% endif %}
-				</div>
-			</div>
-		</section>
+        <section id="us_sup">
+            <div class="name">USERS SUPPORT</div>
+            <div class="group">
+                <div class="tags">
+                {% if users_supported %}
+                    {% for user in users_supported %}
+                        <a href="{% url 'user_helper_item' user_name_url=user %}">{{ user }}</a>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+        </section>
 
-		<section id="resource_sup">
-			<div class="name">CONNECTED RESOURCES</div>
-			<div class="group">
-				<div class="tags">
-				{% if resources_all %}
-					{% for resource in resources_all %}
-						<a href="/dopomoga/resource_all/{{resource}}">{{resource}}</a>
-					{% endfor %}
-				{% endif %}
-				</div>
-			</div>
-		</section>
-	</div>
+        <section id="resource_sup">
+            <div class="name">CONNECTED RESOURCES</div>
+            <div class="group">
+                <div class="tags">
+                {% if resources_all %}
+                    {% for resource in resources_all %}
+                        <a href="{% url 'resource_item' resource_name_url=resource.url %}">{{ resource }}</a>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+        </section>
+    </div>
 
-	<div class="grid1o2">
-	
-		<section id="r_list">
-		{% for resource in resources_all %}
-			<div class="r_item">
-				<div class="icon">
-					<img src="{{resource.icon}}">
-				</div>
-				<div class="r_about">
-					<h4>{{resource}}</h4>
-					<p class="progress"><!--finish later-->
-						<span class="gathered" style="width: 50%">{{resource.gathered}} given</span><!-- {{project.gathered_percent}} -->
-						<span class="left">{{resource.left}} left</span>
-					</p>
-				</div>
-			</div>
-		{%endfor%}
-		</section>
+    <div class="grid1o2">
+    
+        <section id="r_list">
+        {% for resource in resources_all %}
+            <div class="r_item">
+                <div class="icon">
+                    <img src="{{ resource.icon }}">
+                </div>
+                <div class="r_about">
+                    <h4>{{ resource }}</h4>
+                    <p class="progress"><!--finish later-->
+                        <span class="gathered" style="width: 50%">{{ resource.gathered }} given</span><!-- {{ project.gathered_percent }} -->
+                        <span class="left">{{ resource.left }} left</span>
+                    </p>
+                </div>
+            </div>
+        {%endfor%}
+        </section>
 
-		<section id="comments">
-			<div class="name">COMMENTS</div>
-			<div class="group">
-			{% include 'dopomoga/part/comments.html' %}
-			</div>
-		</section>
+        <section id="comments">
+            <div class="name">COMMENTS</div>
+            <div class="group">
+            {% include 'dopomoga/part/comments.html' %}
+            </div>
+        </section>
 
-	</div>
+    </div>
 <!--LATER
-	<section id="users_inneed">
-		<div class="name">PEOPLE SUPPORT</div>{{numUH}}
-		<div class="group">
+    <section id="users_inneed">
+        <div class="name">PEOPLE SUPPORT</div>{{ numUH }}
+        <div class="group">
 {!!!% include 'dopomoga/userhelper_all.html' %!!!}
-		</div>
-	</section>
+        </div>
+    </section>
 
-	<section id="users_helper">
-		<div class="name">PEOPLE NEEDS</div>{{numUI}}
-		<div class="group">
+    <section id="users_helper">
+        <div class="name">PEOPLE NEEDS</div>{{ numUI }}
+        <div class="group">
 {!!!% include 'dopomoga/userinneed_all.html' %!!!}
-		</div>
-	</section>
+        </div>
+    </section>
 
-	<section id="resources">
-		<div class="name">RESOURCES FOR CAUSE</div>{{numR}}
+    <section id="resources">
+        <div class="name">RESOURCES FOR CAUSE</div>{{ numR }}
 {!!!% include 'dopomoga/resources_all.html' %!!!}
-		</div>
-	</section>
+        </div>
+    </section>
 -->
-	
+    
 </article>
 
 {% endblock %}

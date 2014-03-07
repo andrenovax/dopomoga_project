@@ -9,14 +9,14 @@ hidden for everyone, but project_owner
 {{ field }}<br />
 {% endfor %}
 {%if reviews %}
-	{% for review in reviews %}
-		<div class="review_block">
-			<p class="title">{{review.title}}</p>
-			<p class="descr">{{review.descr}}</p>
-			<p class="date_updated">{{review.date_updated}}</p>
-			<div class="pictures">{{review.pictures}}</div>
-			<div><a href="#" class="more btn">more...</a></div>
-		</div>
-	{% endfor %}
+    {% for review in reviews %}
+        <div class="review_block">
+            <p class="title">{{ review.title }}</p>
+            <p class="descr">{{ review.descr }}</p>
+            <p class="date_updated">{{ review.date_updated }}</p>
+            <div class="pictures">{{ review.pictures }}</div>
+            <div><a href="#" class="more btn">more...</a></div>
+        </div>
+    {% endfor %}
 {% endif %}
 -->
