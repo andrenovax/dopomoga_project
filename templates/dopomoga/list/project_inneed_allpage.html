@@ -2,27 +2,27 @@
 
 
 {% block styles %}
-	{% load static %}
-	<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
-	<script src="{% static 'js/lists.js' %}"></script>
+    {% load static %}
+    <link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
+    <script src="{% static 'js/lists.js' %}"></script>
 {% endblock %}
 
 
 {% block page_name %}
-	<a href="{% url 'index' %}"><img src="#" alt="">Д.</a>
-	<a href="{% url 'project_inneed_all' %}"><img src="#" alt="">Допомогти</a>
+    <a href="{% url 'index' %}"><img src="#" alt="">Д.</a>
+    <a href="{% url 'project_inneed_all' %}"><img src="#" alt="">Допомогти</a>
 {% endblock %}
 
 
 {% block filters %}
-	{% include 'dopomoga/part/filters.html' %}
+    {% include 'dopomoga/part/filters.html' %}
 {% endblock %}
 
 
 {% block content %}
 <div class="listWrapper">
-	<article class="pcontent">
-		{% include 'dopomoga/list/project_inneed_all.html' %}
-	</article>
+    <article class="pcontent">
+        {% include 'dopomoga/list/project_inneed_all.html' %}
+    </article>
 </div>
 {% endblock %}

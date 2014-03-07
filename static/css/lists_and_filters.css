@@ -1,135 +1,196 @@
 
 #wrapper {
-	background-image: url('../img/monaco.jpg');
-	background-size: cover;
+    background-image: url('../img/monaco.jpg');
+    background-size: cover;
 }
 
 /*=================================
-			FILTERS
+            FILTERS
 =================================*/
 
 #filter_sh {
-	border-bottom: 1px solid rgb(200,200,200);
+    border-bottom: 1px solid rgb(200,200,200);
 }
 
-	#filter_sh a {
-		padding: 5px 5px 7px;
-		font-weight: bold;
-		font-family: 'PT Sans', sans-serif;
-	}
+    #filter_sh a {
+        padding: 5px 5px 7px;
+        font-weight: bold;
+        font-family: 'PT Sans', sans-serif;
+    }
 
-		/*SHOW/HIDE BUTTONS #filtershow .show { display: none; }*/
+        /*SHOW/HIDE BUTTONS #filtershow .show { display: none; }*/
 
-		#filter_sh span { 
-			display: inline-block;
-			padding-right: 9px;
-			width: 15px;
-			height: 15px;
-		}
+        #filter_sh span { 
+            display: inline-block;
+            padding-right: 9px;
+            width: 15px;
+            height: 15px;
+        }
 
-		#filter_sh #filtershow span { background: url('../icons/show.svg') no-repeat 3px 3px scroll; }
-		#filter_sh #filterhide span { background: url('../icons/hide.svg') no-repeat 3px 5px scroll; }
+        #filter_sh #filtershow span { background: url('../icons/show.svg') no-repeat 3px 3px scroll; }
+        #filter_sh #filterhide span { background: url('../icons/hide.svg') no-repeat 3px 5px scroll; }
 
 /*=================================
-			LISTS
+            LISTS
 =================================*/
 
 .i_list li {
-	text-align: left;
-	display: inline-block;
-	vertical-align: top;
-	position: relative;
-	margin: 0 5px 5px 0;
-	width: 31%;
-	min-width: 200px;
-	background: rgb(233,233,233);
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px 5px 0;
+    width: 31%;
+    min-width: 220px;
+    background: rgb(255,255,255);
+    border-bottom: 2px solid rgb(200,200,200);
+    box-shadow: 0 0 2px rgb(100,100,100);
 }
 
 .listWrapper {
-	padding: 40px 10px;
-	background-size: cover;
-	text-align: center;
+    padding: 40px 10px;
+    background-size: cover;
+    text-align: center;
 }
 
 .listWrapper .i_list li {
-	max-width: 250px;
+    max-width: 250px;
 }
 
 /*=================================
-			LIST ITEMS
+            LIST ITEMS
 =================================*/
 
+
 /*IMAGES AND ICONS*/
+
 .im {
-	height: 180px;			
 }
 
-	.im:hover {
-		background: none;
-	}
+    .im:hover {
+        background: none;
+    }
 
 .icons {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	max-width: 100px;
-	overflow: hidden;
-	text-align: right;
+    overflow: hidden;
+    margin-top: -35px;
 }
 
-	.icons a {
-		margin-bottom: 5px;
-	}
-
-	.icons .icn {
-		display: inline-block;
-		border: 1px solid rgb(200,200,200);
-		width: 50px;
-		height: 50px;
-	}
-
-	.icons .cptn {
-		display: block;
-		max-height: 40px;
-		word-wrap:break-word;
-	}
-
-/*TAGS*/
-.tags { height: 45px; }
-	.tags .cause { max-width: 31%; }
-
-.uptags {
-	position: absolute;
-	top: 155px;
+.icons a {
+    display: inline-block;
+    padding: 5px;
 }
 
-/*TITLE, DESCR, READMORE*/
-.ititle, .idescr {
-	display: block;
-	padding: 5px;
+    .icons .icn, .ititle .icn {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .icons .icn span, .ititle .icn span {
+        padding: 0;
+        width: 20px;
+    }
+
+    .icons .cptn {
+        display: inline-block;
+        margin-left: 5px;
+        max-width: 200px;
+        white-space: none;
+        font-size: 13px;
+        text-shadow: 0 0 2px rgb(0,0,0);
+        color: rgb(255,255,255);
+    }
+
+
+/*DESCR*/
+
+.ititle {
+    margin: 5px 10px 0;
 }
 
-.ititle a {
-	max-height: 2em;
-	font-size: 17px;
-}
+    .ititle a {
+        display: inline-block;
+        max-height: 2em;
+        font-size: 15px;
+    }
 
 .idescr {
-	height: 75px;
-	border-bottom: 1px solid rgb(200,200,200);
-	overflow: hidden;
+    margin: 5px 10px 5px;
+    height: 79px;
+    overflow: hidden;
+    line-height: 1.2em;
+    font-size: 13px;
 }
 
-.readmore {
-	vertical-align: top;
-	display: inline-block;
-	height: 20px;
-	padding: 5px 0;
-	text-align: center;
-	color: #CC181E;
-	border-bottom: 1px solid rgb(200,200,200);
-	width: 49%;
+
+/*CAPTION AND TAGS*/
+
+.caption>a, .tags {
+    display: block;
+    padding: 10px;
+    border-top: 1px solid rgb(200,200,200);
 }
+
+    .caption div {
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .caption .icn {
+        border: 1px solid rgb(200,200,200);
+        padding: 0;
+        margin-right: 5px;
+    }
+
+    .bottom {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+.tags .cause { max-width: 31%; }
+
+
+/*BUTTONS*/
+
+.btns {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.i_list li:hover .btns {
+    display: block;
+}
+
+.btns>* {
+    width: 50%;
+}
+
+    .btns a:first-child {
+        margin-left: -1px;
+        border-right: 1px solid rgb(200,200,200);
+    }
+
+    .readmore {
+        vertical-align: top;
+        display: inline-block;
+        float: left;
+        padding: 5px 0;
+        height: 20px;
+        border-bottom: 1px solid rgb(200,200,200);
+        border-top: 1px solid rgb(200,200,200);
+        text-align: center;
+        background-color: #CC181E;
+        color: rgb(255,255,255);
+    }
+
+    .readmore:hover {
+        margin-top: 0;
+        border-bottom: 5px solid #CC181E;
+    }
 
 
 /*======================================
@@ -138,21 +199,21 @@
 
 
 @media screen and (max-width: 653px) {
-	#navtarget:target .i_list li {
-		width: 100%;
-		max-width: 100%;
-		border: 5px 0 0;
-	}
+    #navtarget:target .i_list li {
+        width: 100%;
+        max-width: 100%;
+        border: 5px 0 0;
+    }
 }
 
 
 @media screen and (max-width: 420px) {
-	.i_list li {
-		width: 100%;
-		border: 5px 0 0;
-	}
+    .i_list li {
+        width: 100%;
+        border: 5px 0 0;
+    }
 
-	.listWrapper .i_list li {
-		max-width: 100%;
-	}
+    .listWrapper .i_list li {
+        max-width: 100%;
+    }
 }

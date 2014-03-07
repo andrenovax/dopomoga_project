@@ -3,84 +3,99 @@
 
 
 {% block styles %}
-	{% load static %}
-	<link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'css/lists_and_filters.css' %}" rel="stylesheet">
 {% endblock %}
 
 
 {% block page_name %}
-	<a href="{% url 'index' %}"><img src="#" alt="">Д.</a>
-	<a href="{% url 'userinneed_all' %}"><img src="#" alt="">Потребують</a>
+    <a href="{% url 'index' %}"><img src="#" alt="">Д.</a>
+    <a href="{% url 'userinneed_all' %}"><img src="#" alt="">Потребують</a>
 {% endblock %}
 
 
 {% block filters %}
-	{% include 'dopomoga/part/filters.html' %}
+    {% include 'dopomoga/part/filters.html' %}
 {% endblock %}
 
 
 {% block content %}
 <div class="listWrapper">
-	<article class="pcontent">
-		{% if userinneed_all %}
-			<ul class="i_list">
-				{% for user in userinneed_all %}
-					<li>
-					<!--===MINIMUM=== [photo], [name, descr], [cause, place], [gathered, left], [read more and help]-->			
-						<a href="/dopomoga/userinneed_all/{{user}}" class="im"><img src="#"></a>
+    <article class="pcontent">
+        {% if userinneed_all %}
+            <ul class="i_list">
+                {% for user in userinneed_all %}
+                    <li>
+                    <!--===MINIMUM=== [photo], [name, descr], [cause, place], [gathered, left], [read more and help]-->
+                        <div class="btns">
+                            <a href="{% url 'user_inneed_item' user_name_url=user %}" class="readmore btn"><span>Read more</span></a>
+                            <div class="cancel readmore btn"><p>Cancel</p></div>
 
-						<p class="progress"><!--finish later-->
-							<span class="gathered" style="width: {{firstresource.gathered_percent}}%">{{firstresource.gathered}} gathered</span>
-							<span class="left">{{firstresource.left}} left</span>
-						</p>
+                        </div>      
 
-						
-						<div class="tags uptags">
+                        <a href="{% url 'user_inneed_item' user_name_url=user %}" class="im">
+                            <img src="{{ user.picture.url }}">
+                        </a>
 
-							<p>{{user.numOfproject_inneed_all}} projects</p>
-							<!-- LATER <div class="subtags">
-							{% for project in user.projects_helper.all %}
-								<p>{{project}}</p> 
-							{% endfor %}
-							</div>-->
+                        <section class="icons">
+                            <a href="#">
+                                <div class="icn" href="#"><span></span></div>
+                                <div class="cptn" href="#">{{ firstresource }}</div>
+                            </a>
+                        </section>
 
-							<p>{{user.project_part_all}} projects participates</p>
-							<!-- LATER<div class="subtags">
-							{% for project in user.projects_inneed.all %}
-								<p>{{project}}</p> 
-							{% endfor %}
-							</div>-->
+                        <p class="progress">
+                            <span class="gathered" style="width: {{ firstresource.gathered_percent }}%">{{ firstresource.gathered }} shared</span>
+                            <span class="left">{{ firstresource.left }} left</span>
+                        </p>
+                        
+                        <p class="ititle">
+                            <a href="{% url 'user_inneed_item' user_name_url=user %}">{{ user }}</a>
+                        </p>
+                        <p class="idescr">{{ user.descr }}</p>
+                        
+                        <div class="tags uptags">
 
-							<!--Needed???
-							<p>{{numR}} resources</p>
-							<div class="subtags">
-							{% for resource in user.resources.all %}
-								<p>{{resource}}</p> 
-							{% endfor %}
-							</div>
+                            <p>{{ user.numOfproject_inneed_all }} projects</p>
+                            <!-- LATER <div class="subtags">
+                            {% for project in user.projects_helper.all %}
+                                <p>{{ project }}</p> 
+                            {% endfor %}
+                            </div>-->
 
-							<p>{{numC}} causes</p>
-							<div class="subtags">
-							{% for cause in user.causes.all %}
-								<p>{{cause}}</p> 
-							{% endfor %}
-							</div>
+                            <p>{{ user.project_part_all }} projects participates</p>
+                            <!-- LATER<div class="subtags">
+                            {% for project in user.projects_inneed.all %}
+                                <p>{{ project }}</p> 
+                            {% endfor %}
+                            </div>-->
 
-							MUCH LATER
-							<a href="#">{{numUI}} users in need supported</a><!hidden>
-							{% for user in user.users_inneed.all %}
-								<p>{{user}}</p>
-							{% endfor %}
-							-->
-						</div>
+                            <!--Needed???
+                            <p>{{ numR }} resources</p>
+                            <div class="subtags">
+                            {% for resource in user.resources.all %}
+                                <p>{{ resource }}</p> 
+                            {% endfor %}
+                            </div>
 
-						<p class="ititle"><a href="/dopomoga/userinneed_all/{{user}}">{{user}}</a></p>
-						<p class="idescr">{{user.descr}}</p><!--limit to 256 chars-->
-						<a href="" class="readmore btn">Read more</a>
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	</article>
+                            <p>{{ numC }} causes</p>
+                            <div class="subtags">
+                            {% for cause in user.causes.all %}
+                                <p>{{ cause }}</p> 
+                            {% endfor %}
+                            </div>
+
+                            MUCH LATER
+                            <a href="#">{{ numUI }} users in need supported</a><!hidden>
+                            {% for user in user.users_inneed.all %}
+                                <p>{{ user }}</p>
+                            {% endfor %}
+                            -->
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </article>
 </div>
 {% endblock %}
