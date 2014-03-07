@@ -16,9 +16,9 @@ def about(request):
 
 
 def index(request):
-    project_inneed_all = ProjectInneed.objects.order_by('-date_started')[:6]
+    project_inneed_all = ProjectInneed.objects.order_by('-date_started')[:3]
     project_inneed_all = urlator(project_inneed_all)
-    project_helper_all = ProjectHelper.objects.order_by('-date_started')[:6]
+    project_helper_all = ProjectHelper.objects.order_by('-date_started')[:3]
     project_helper_all = urlator(project_helper_all)
     context_dict = {'project_inneed_all': project_inneed_all,
                     'project_helper_all': project_helper_all}
@@ -98,11 +98,11 @@ def resource_all(request):
     resource_all = urlator(resource_all)
     #count number of
     for resource in resource_all:
-        resource.numOfcauses_all = resource.cause_set.all().count() #causes where resource participates
-        resource.numOfproject_inneed_all = ProjectInneed.objects.filter(resource=resource).count() #projects inneed that need this resource
-        resource.numOfproject_helper_all = ProjectHelper.objects.filter(resource=resource).count() #projects helpers that share this resource
-        resource.numOfusers_inneed = UserInneedProfile.objects.filter(projectinneed__resource=resource).count() #users in need
-        resource.numOfusers_supported = UserProfile.objects.filter(resources=resource).count() #users supported
+        resource.numOfcauses_all = resource.cause_set.all().count()  # causes where resource participates
+        resource.numOfproject_inneed_all = ProjectInneed.objects.filter(resource=resource).count()  # projects inneed that need this resource
+        resource.numOfproject_helper_all = ProjectHelper.objects.filter(resource=resource).count()  # projects helpers that share this resource
+        resource.numOfusers_inneed = UserInneedProfile.objects.filter(projectinneed__resource=resource).count()  # users in need
+        resource.numOfusers_supported = UserProfile.objects.filter(resources=resource).count()  # users supported
     context_dict = {'resource_all': resource_all}
     return render(request,
                   'dopomoga/list/resource_all.html',
@@ -110,15 +110,15 @@ def resource_all(request):
 
 
 def cause_all(request):
-    cause_all = Cause.objects.all() #order_by('-number of projects_inneed')
+    cause_all = Cause.objects.all()  # order_by('-number of projects_inneed')
     cause_all = urlator(cause_all)
     #count number of
     for cause in cause_all:
-        cause.numOfresources_all = cause.resources.all().count() #resources where cause participates
-        cause.numOfproject_inneed_all = ProjectInneed.objects.filter(cause=cause).count() #projects inneed that need this cause
-        cause.numOfproject_helper_all = ProjectHelper.objects.filter(cause=cause).count() #projects helpers that share this cause
-        cause.numOfusers_inneed = UserInneedProfile.objects.filter(projectinneed__cause=cause).count() #users in need
-        cause.numOfusers_supported = UserProfile.objects.filter(causes=cause).count() #users supported
+        cause.numOfresources_all = cause.resources.all().count()  # resources where cause participates
+        cause.numOfproject_inneed_all = ProjectInneed.objects.filter(cause=cause).count()  # projects inneed that need this cause
+        cause.numOfproject_helper_all = ProjectHelper.objects.filter(cause=cause).count()  # projects helpers that share this cause
+        cause.numOfusers_inneed = UserInneedProfile.objects.filter(projectinneed__cause=cause).count()  # users in need
+        cause.numOfusers_supported = UserProfile.objects.filter(causes=cause).count()  # users supported
     context_dict = {'cause_all': cause_all}
     return render(request,
                   'dopomoga/list/cause_all.html',

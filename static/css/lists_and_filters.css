@@ -42,7 +42,7 @@
     overflow: hidden;
     margin: 0 5px 5px 0;
     width: 31%;
-    min-width: 220px;
+    min-width: 215px;
     background: rgb(255,255,255);
     border-bottom: 2px solid rgb(200,200,200);
     box-shadow: 0 0 2px rgb(100,100,100);
@@ -56,6 +56,10 @@
 
 .listWrapper .i_list li {
     max-width: 250px;
+}
+
+.i_list li:last-child {
+    margin-right: 0;
 }
 
 /*=================================

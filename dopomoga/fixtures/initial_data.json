@@ -1,0 +1,2459 @@
+[
+{
+    "fields": {
+        "app_label": "admin", 
+        "name": "log entry", 
+        "model": "logentry"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 1
+},
+{
+    "fields": {
+        "app_label": "auth", 
+        "name": "permission", 
+        "model": "permission"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 2
+},
+{
+    "fields": {
+        "app_label": "auth", 
+        "name": "group", 
+        "model": "group"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 3
+},
+{
+    "fields": {
+        "app_label": "auth", 
+        "name": "user", 
+        "model": "user"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 4
+},
+{
+    "fields": {
+        "app_label": "contenttypes", 
+        "name": "content type", 
+        "model": "contenttype"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 5
+},
+{
+    "fields": {
+        "app_label": "sessions", 
+        "name": "session", 
+        "model": "session"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 6
+},
+{
+    "fields": {
+        "app_label": "south", 
+        "name": "migration history", 
+        "model": "migrationhistory"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 7
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project", 
+        "model": "project"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 8
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "review", 
+        "model": "review"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 9
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "comment", 
+        "model": "comment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 10
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project inneed", 
+        "model": "projectinneed"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 11
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project inneed review", 
+        "model": "projectinneedreview"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 12
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project inneed comment", 
+        "model": "projectinneedcomment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 13
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project helper", 
+        "model": "projecthelper"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 14
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project helper review", 
+        "model": "projecthelperreview"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 15
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "project helper comment", 
+        "model": "projecthelpercomment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 16
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "resource", 
+        "model": "resource"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 17
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "resource comment", 
+        "model": "resourcecomment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 18
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "cause", 
+        "model": "cause"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 19
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "cause comment", 
+        "model": "causecomment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 20
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "user profile", 
+        "model": "userprofile"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 21
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "user profile comment", 
+        "model": "userprofilecomment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 22
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "user inneed profile", 
+        "model": "userinneedprofile"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 23
+},
+{
+    "fields": {
+        "app_label": "dopomoga", 
+        "name": "user inneed comment", 
+        "model": "userinneedcomment"
+    }, 
+    "model": "contenttypes.contenttype", 
+    "pk": 24
+},
+{
+    "fields": {
+        "session_data": "M2ZkM2NhMTFiNTY0ZmRhZGI4OTQxOWNjZjA4ODJiNDlmZDIxNmNlNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6M30=", 
+        "expire_date": "2014-03-19T13:50:23.373Z"
+    }, 
+    "model": "sessions.session", 
+    "pk": "zr9oqpgv4uw8h8fnmackrsiqqxlqgljt"
+},
+{
+    "fields": {
+        "app_name": "dopomoga", 
+        "migration": "0001_initial", 
+        "applied": "2014-02-03T11:37:44.265Z"
+    }, 
+    "model": "south.migrationhistory", 
+    "pk": 1
+},
+{
+    "fields": {
+        "app_name": "dopomoga", 
+        "migration": "0002_auto__add_review__add_projecthelper__add_projectinneedreview__add_reso", 
+        "applied": "2014-02-03T11:37:44.278Z"
+    }, 
+    "model": "south.migrationhistory", 
+    "pk": 2
+},
+{
+    "fields": {
+        "icon": "", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "Resource Test 1", 
+        "picture": "default.jpg"
+    }, 
+    "model": "dopomoga.resource", 
+    "pk": 1
+},
+{
+    "fields": {
+        "icon": "", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpSed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut ", 
+        "name": "\u041a\u0440\u043e\u0432", 
+        "picture": "default.jpg"
+    }, 
+    "model": "dopomoga.resource", 
+    "pk": 2
+},
+{
+    "fields": {
+        "icon": "", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "\u0406\u0436\u0430", 
+        "picture": "default.jpg"
+    }, 
+    "model": "dopomoga.resource", 
+    "pk": 3
+},
+{
+    "fields": {
+        "icon": "", 
+        "descr": "", 
+        "name": "\u041e\u0434\u044f\u0433", 
+        "picture": "default.jpg"
+    }, 
+    "model": "dopomoga.resource", 
+    "pk": 4
+},
+{
+    "fields": {
+        "icon": "", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "\u041b\u0456\u043a\u0438", 
+        "picture": "default.jpg"
+    }, 
+    "model": "dopomoga.resource", 
+    "pk": 5
+},
+{
+    "fields": {
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "\u0417\u0434\u043e\u0440\u043e\u0432\u044f", 
+        "picture": "default.jpg", 
+        "resources": [
+            2, 
+            3, 
+            4, 
+            5
+        ]
+    }, 
+    "model": "dopomoga.cause", 
+    "pk": 1
+},
+{
+    "fields": {
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "name": "\u0415\u043a\u043e\u043b\u043e\u0433\u0456\u044f", 
+        "picture": "default.jpg", 
+        "resources": [
+            1
+        ]
+    }, 
+    "model": "dopomoga.cause", 
+    "pk": 2
+},
+{
+    "fields": {
+        "descr": "", 
+        "name": "\u0414\u0456\u0442\u0438", 
+        "picture": "default.jpg", 
+        "resources": [
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ]
+    }, 
+    "model": "dopomoga.cause", 
+    "pk": 3
+},
+{
+    "fields": {
+        "content_type": [
+            "admin", 
+            "logentry"
+        ], 
+        "name": "Can add log entry", 
+        "codename": "add_logentry"
+    }, 
+    "model": "auth.permission", 
+    "pk": 1
+},
+{
+    "fields": {
+        "content_type": [
+            "admin", 
+            "logentry"
+        ], 
+        "name": "Can change log entry", 
+        "codename": "change_logentry"
+    }, 
+    "model": "auth.permission", 
+    "pk": 2
+},
+{
+    "fields": {
+        "content_type": [
+            "admin", 
+            "logentry"
+        ], 
+        "name": "Can delete log entry", 
+        "codename": "delete_logentry"
+    }, 
+    "model": "auth.permission", 
+    "pk": 3
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "permission"
+        ], 
+        "name": "Can add permission", 
+        "codename": "add_permission"
+    }, 
+    "model": "auth.permission", 
+    "pk": 4
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "permission"
+        ], 
+        "name": "Can change permission", 
+        "codename": "change_permission"
+    }, 
+    "model": "auth.permission", 
+    "pk": 5
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "permission"
+        ], 
+        "name": "Can delete permission", 
+        "codename": "delete_permission"
+    }, 
+    "model": "auth.permission", 
+    "pk": 6
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "group"
+        ], 
+        "name": "Can add group", 
+        "codename": "add_group"
+    }, 
+    "model": "auth.permission", 
+    "pk": 7
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "group"
+        ], 
+        "name": "Can change group", 
+        "codename": "change_group"
+    }, 
+    "model": "auth.permission", 
+    "pk": 8
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "group"
+        ], 
+        "name": "Can delete group", 
+        "codename": "delete_group"
+    }, 
+    "model": "auth.permission", 
+    "pk": 9
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "name": "Can add user", 
+        "codename": "add_user"
+    }, 
+    "model": "auth.permission", 
+    "pk": 10
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "name": "Can change user", 
+        "codename": "change_user"
+    }, 
+    "model": "auth.permission", 
+    "pk": 11
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "name": "Can delete user", 
+        "codename": "delete_user"
+    }, 
+    "model": "auth.permission", 
+    "pk": 12
+},
+{
+    "fields": {
+        "content_type": [
+            "contenttypes", 
+            "contenttype"
+        ], 
+        "name": "Can add content type", 
+        "codename": "add_contenttype"
+    }, 
+    "model": "auth.permission", 
+    "pk": 13
+},
+{
+    "fields": {
+        "content_type": [
+            "contenttypes", 
+            "contenttype"
+        ], 
+        "name": "Can change content type", 
+        "codename": "change_contenttype"
+    }, 
+    "model": "auth.permission", 
+    "pk": 14
+},
+{
+    "fields": {
+        "content_type": [
+            "contenttypes", 
+            "contenttype"
+        ], 
+        "name": "Can delete content type", 
+        "codename": "delete_contenttype"
+    }, 
+    "model": "auth.permission", 
+    "pk": 15
+},
+{
+    "fields": {
+        "content_type": [
+            "sessions", 
+            "session"
+        ], 
+        "name": "Can add session", 
+        "codename": "add_session"
+    }, 
+    "model": "auth.permission", 
+    "pk": 16
+},
+{
+    "fields": {
+        "content_type": [
+            "sessions", 
+            "session"
+        ], 
+        "name": "Can change session", 
+        "codename": "change_session"
+    }, 
+    "model": "auth.permission", 
+    "pk": 17
+},
+{
+    "fields": {
+        "content_type": [
+            "sessions", 
+            "session"
+        ], 
+        "name": "Can delete session", 
+        "codename": "delete_session"
+    }, 
+    "model": "auth.permission", 
+    "pk": 18
+},
+{
+    "fields": {
+        "content_type": [
+            "south", 
+            "migrationhistory"
+        ], 
+        "name": "Can add migration history", 
+        "codename": "add_migrationhistory"
+    }, 
+    "model": "auth.permission", 
+    "pk": 19
+},
+{
+    "fields": {
+        "content_type": [
+            "south", 
+            "migrationhistory"
+        ], 
+        "name": "Can change migration history", 
+        "codename": "change_migrationhistory"
+    }, 
+    "model": "auth.permission", 
+    "pk": 20
+},
+{
+    "fields": {
+        "content_type": [
+            "south", 
+            "migrationhistory"
+        ], 
+        "name": "Can delete migration history", 
+        "codename": "delete_migrationhistory"
+    }, 
+    "model": "auth.permission", 
+    "pk": 21
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "project"
+        ], 
+        "name": "Can add project", 
+        "codename": "add_project"
+    }, 
+    "model": "auth.permission", 
+    "pk": 22
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "project"
+        ], 
+        "name": "Can change project", 
+        "codename": "change_project"
+    }, 
+    "model": "auth.permission", 
+    "pk": 23
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "project"
+        ], 
+        "name": "Can delete project", 
+        "codename": "delete_project"
+    }, 
+    "model": "auth.permission", 
+    "pk": 24
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "review"
+        ], 
+        "name": "Can add review", 
+        "codename": "add_review"
+    }, 
+    "model": "auth.permission", 
+    "pk": 25
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "review"
+        ], 
+        "name": "Can change review", 
+        "codename": "change_review"
+    }, 
+    "model": "auth.permission", 
+    "pk": 26
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "review"
+        ], 
+        "name": "Can delete review", 
+        "codename": "delete_review"
+    }, 
+    "model": "auth.permission", 
+    "pk": 27
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "comment"
+        ], 
+        "name": "Can add comment", 
+        "codename": "add_comment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 28
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "comment"
+        ], 
+        "name": "Can change comment", 
+        "codename": "change_comment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 29
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "comment"
+        ], 
+        "name": "Can delete comment", 
+        "codename": "delete_comment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 30
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneed"
+        ], 
+        "name": "Can add project inneed", 
+        "codename": "add_projectinneed"
+    }, 
+    "model": "auth.permission", 
+    "pk": 31
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneed"
+        ], 
+        "name": "Can change project inneed", 
+        "codename": "change_projectinneed"
+    }, 
+    "model": "auth.permission", 
+    "pk": 32
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneed"
+        ], 
+        "name": "Can delete project inneed", 
+        "codename": "delete_projectinneed"
+    }, 
+    "model": "auth.permission", 
+    "pk": 33
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneedreview"
+        ], 
+        "name": "Can add project inneed review", 
+        "codename": "add_projectinneedreview"
+    }, 
+    "model": "auth.permission", 
+    "pk": 34
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneedreview"
+        ], 
+        "name": "Can change project inneed review", 
+        "codename": "change_projectinneedreview"
+    }, 
+    "model": "auth.permission", 
+    "pk": 35
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneedreview"
+        ], 
+        "name": "Can delete project inneed review", 
+        "codename": "delete_projectinneedreview"
+    }, 
+    "model": "auth.permission", 
+    "pk": 36
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneedcomment"
+        ], 
+        "name": "Can add project inneed comment", 
+        "codename": "add_projectinneedcomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 37
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneedcomment"
+        ], 
+        "name": "Can change project inneed comment", 
+        "codename": "change_projectinneedcomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 38
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneedcomment"
+        ], 
+        "name": "Can delete project inneed comment", 
+        "codename": "delete_projectinneedcomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 39
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "name": "Can add project helper", 
+        "codename": "add_projecthelper"
+    }, 
+    "model": "auth.permission", 
+    "pk": 40
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "name": "Can change project helper", 
+        "codename": "change_projecthelper"
+    }, 
+    "model": "auth.permission", 
+    "pk": 41
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "name": "Can delete project helper", 
+        "codename": "delete_projecthelper"
+    }, 
+    "model": "auth.permission", 
+    "pk": 42
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelperreview"
+        ], 
+        "name": "Can add project helper review", 
+        "codename": "add_projecthelperreview"
+    }, 
+    "model": "auth.permission", 
+    "pk": 43
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelperreview"
+        ], 
+        "name": "Can change project helper review", 
+        "codename": "change_projecthelperreview"
+    }, 
+    "model": "auth.permission", 
+    "pk": 44
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelperreview"
+        ], 
+        "name": "Can delete project helper review", 
+        "codename": "delete_projecthelperreview"
+    }, 
+    "model": "auth.permission", 
+    "pk": 45
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelpercomment"
+        ], 
+        "name": "Can add project helper comment", 
+        "codename": "add_projecthelpercomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 46
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelpercomment"
+        ], 
+        "name": "Can change project helper comment", 
+        "codename": "change_projecthelpercomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 47
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelpercomment"
+        ], 
+        "name": "Can delete project helper comment", 
+        "codename": "delete_projecthelpercomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 48
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "name": "Can add resource", 
+        "codename": "add_resource"
+    }, 
+    "model": "auth.permission", 
+    "pk": 49
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "name": "Can change resource", 
+        "codename": "change_resource"
+    }, 
+    "model": "auth.permission", 
+    "pk": 50
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "name": "Can delete resource", 
+        "codename": "delete_resource"
+    }, 
+    "model": "auth.permission", 
+    "pk": 51
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resourcecomment"
+        ], 
+        "name": "Can add resource comment", 
+        "codename": "add_resourcecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 52
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resourcecomment"
+        ], 
+        "name": "Can change resource comment", 
+        "codename": "change_resourcecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 53
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resourcecomment"
+        ], 
+        "name": "Can delete resource comment", 
+        "codename": "delete_resourcecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 54
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "cause"
+        ], 
+        "name": "Can add cause", 
+        "codename": "add_cause"
+    }, 
+    "model": "auth.permission", 
+    "pk": 55
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "cause"
+        ], 
+        "name": "Can change cause", 
+        "codename": "change_cause"
+    }, 
+    "model": "auth.permission", 
+    "pk": 56
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "cause"
+        ], 
+        "name": "Can delete cause", 
+        "codename": "delete_cause"
+    }, 
+    "model": "auth.permission", 
+    "pk": 57
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "causecomment"
+        ], 
+        "name": "Can add cause comment", 
+        "codename": "add_causecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 58
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "causecomment"
+        ], 
+        "name": "Can change cause comment", 
+        "codename": "change_causecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 59
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "causecomment"
+        ], 
+        "name": "Can delete cause comment", 
+        "codename": "delete_causecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 60
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "name": "Can add user profile", 
+        "codename": "add_userprofile"
+    }, 
+    "model": "auth.permission", 
+    "pk": 61
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "name": "Can change user profile", 
+        "codename": "change_userprofile"
+    }, 
+    "model": "auth.permission", 
+    "pk": 62
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "name": "Can delete user profile", 
+        "codename": "delete_userprofile"
+    }, 
+    "model": "auth.permission", 
+    "pk": 63
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofilecomment"
+        ], 
+        "name": "Can add user profile comment", 
+        "codename": "add_userprofilecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 64
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofilecomment"
+        ], 
+        "name": "Can change user profile comment", 
+        "codename": "change_userprofilecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 65
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofilecomment"
+        ], 
+        "name": "Can delete user profile comment", 
+        "codename": "delete_userprofilecomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 66
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedprofile"
+        ], 
+        "name": "Can add user inneed profile", 
+        "codename": "add_userinneedprofile"
+    }, 
+    "model": "auth.permission", 
+    "pk": 67
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedprofile"
+        ], 
+        "name": "Can change user inneed profile", 
+        "codename": "change_userinneedprofile"
+    }, 
+    "model": "auth.permission", 
+    "pk": 68
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedprofile"
+        ], 
+        "name": "Can delete user inneed profile", 
+        "codename": "delete_userinneedprofile"
+    }, 
+    "model": "auth.permission", 
+    "pk": 69
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedcomment"
+        ], 
+        "name": "Can add user inneed comment", 
+        "codename": "add_userinneedcomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 70
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedcomment"
+        ], 
+        "name": "Can change user inneed comment", 
+        "codename": "change_userinneedcomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 71
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedcomment"
+        ], 
+        "name": "Can delete user inneed comment", 
+        "codename": "delete_userinneedcomment"
+    }, 
+    "model": "auth.permission", 
+    "pk": 72
+},
+{
+    "fields": {
+        "date_joined": "2014-02-03T11:32:14.049Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": true, 
+        "password": "pbkdf2_sha256$12000$10ydAi84uBmy$bwomNZLH/A+5vPw8ObvBpI4X2WoS/cUAs/wi07/daiU=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "andrenovax@gmail.com", 
+        "last_name": "", 
+        "username": "andrey", 
+        "last_login": "2014-02-03T11:32:14.049Z", 
+        "is_superuser": true
+    }, 
+    "model": "auth.user", 
+    "pk": 1
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T13:50:05.745Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": true, 
+        "password": "pbkdf2_sha256$12000$Sj3aMGuXXQBU$EnD/k7E1BYpWincD1INqJzGsfAYM0CMcn48j5XeQYdo=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "andrenovax@gmail.com", 
+        "last_name": "", 
+        "username": "andrenovax", 
+        "last_login": "2014-03-05T13:50:23.363Z", 
+        "is_superuser": true
+    }, 
+    "model": "auth.user", 
+    "pk": 3
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T14:16:05Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": false, 
+        "password": "pbkdf2_sha256$12000$iAJ7MpDLxhHX$RJa8Lki3LYRq/0mcC+Yih1dxQL8+qdeMyCueOoO4CQk=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "", 
+        "last_name": "", 
+        "username": "john", 
+        "last_login": "2014-03-05T14:16:05Z", 
+        "is_superuser": false
+    }, 
+    "model": "auth.user", 
+    "pk": 4
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T14:16:34.486Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": false, 
+        "password": "pbkdf2_sha256$12000$1l4jmojPdqaS$DpSnQsxK++b56tYAmgJqPzZ8KLmLddfyPc6uUVbTPQE=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "", 
+        "last_name": "", 
+        "username": "johnny", 
+        "last_login": "2014-03-05T14:16:34.486Z", 
+        "is_superuser": false
+    }, 
+    "model": "auth.user", 
+    "pk": 5
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T14:18:50.861Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": false, 
+        "password": "pbkdf2_sha256$12000$A2qs2ex93sqB$r29dIrG06moSjlHg8dYITS0IlmYJqSNi5ow6QXOTbI0=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "", 
+        "last_name": "", 
+        "username": "johnson", 
+        "last_login": "2014-03-05T14:18:50.861Z", 
+        "is_superuser": false
+    }, 
+    "model": "auth.user", 
+    "pk": 6
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T14:23:23.838Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": false, 
+        "password": "pbkdf2_sha256$12000$vgKU8UtSRN1e$uVK2/7B9ZLCAfTTQ6qZE4uVz6EX9hF0bDhYc2Z/2uEU=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "", 
+        "last_name": "", 
+        "username": "judy", 
+        "last_login": "2014-03-05T14:23:23.837Z", 
+        "is_superuser": false
+    }, 
+    "model": "auth.user", 
+    "pk": 7
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T14:23:37.773Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": false, 
+        "password": "pbkdf2_sha256$12000$1nSb7MMZ7moB$Ifs0XN7a5so3toRTRqt7Z5JW+jIoOPl7QqvOyZT/K+E=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "", 
+        "last_name": "", 
+        "username": "jack", 
+        "last_login": "2014-03-05T14:23:37.772Z", 
+        "is_superuser": false
+    }, 
+    "model": "auth.user", 
+    "pk": 8
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05T14:24:05.779Z", 
+        "groups": [], 
+        "is_active": true, 
+        "is_staff": false, 
+        "password": "pbkdf2_sha256$12000$V5pmrlIxr92z$Bg4sQ6bQzimeE2zY4/czwVgCtYBrPQ7mWrYmvkBD+s4=", 
+        "first_name": "", 
+        "user_permissions": [], 
+        "email": "", 
+        "last_name": "", 
+        "username": "jared", 
+        "last_login": "2014-03-05T14:24:05.778Z", 
+        "is_superuser": false
+    }, 
+    "model": "auth.user", 
+    "pk": 9
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "http://www.test.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "Project Helper Test 1", 
+        "place": "Kiev", 
+        "res_qnt": 100, 
+        "project_author": [
+            "andrenovax"
+        ], 
+        "cause": [
+            1
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            1
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 1
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "", 
+        "phone": 380977777, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "http://www.google.com/", 
+        "descr": "Se", 
+        "name": "Project Helper Test 2", 
+        "place": "Lviv", 
+        "res_qnt": 0, 
+        "project_author": [
+            "andrey"
+        ], 
+        "cause": [
+            1, 
+            2
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            3
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 2
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "Project Helper Test 3", 
+        "place": "Rivne", 
+        "res_qnt": 0, 
+        "project_author": [
+            "andrenovax"
+        ], 
+        "cause": [
+            1, 
+            3
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            2
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 3
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "http://www.test.me/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "name": "Project Helper Test 4", 
+        "place": "Mariupol", 
+        "res_qnt": 1500, 
+        "project_author": [
+            "andrenovax"
+        ], 
+        "cause": [
+            3
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            4
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 4
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "http://www.test.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "name": "Project In Need Test 1", 
+        "place": "New-York", 
+        "res_qnt": 1, 
+        "project_author": [
+            "andrenovax"
+        ], 
+        "cause": [
+            1
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            5
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 5
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "q", 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "http://www.google.com/", 
+        "descr": "q", 
+        "name": "Project In Need Test 2", 
+        "place": "San-Francisco", 
+        "res_qnt": 10, 
+        "project_author": [
+            "andrey"
+        ], 
+        "cause": [
+            1, 
+            3
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            3
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 6
+},
+{
+    "fields": {
+        "votes": 0, 
+        "reports": 0, 
+        "how_to_help": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "funded": false, 
+        "date_finished": "2014-03-05", 
+        "website": "http://www.test.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "name": "Project In Need Test 3", 
+        "place": "Kiev", 
+        "res_qnt": 0, 
+        "project_author": [
+            "andrenovax"
+        ], 
+        "cause": [
+            1
+        ], 
+        "date_started": "2014-03-05", 
+        "resource": [
+            2
+        ]
+    }, 
+    "model": "dopomoga.project", 
+    "pk": 7
+},
+{
+    "fields": {
+        "users_inneed": [], 
+        "resource": [
+            5
+        ], 
+        "cause": [
+            1
+        ], 
+        "docs_pics": "", 
+        "docs_descr": ""
+    }, 
+    "model": "dopomoga.projectinneed", 
+    "pk": 5
+},
+{
+    "fields": {
+        "users_inneed": [], 
+        "resource": [
+            3
+        ], 
+        "cause": [
+            1, 
+            3
+        ], 
+        "docs_pics": "", 
+        "docs_descr": ""
+    }, 
+    "model": "dopomoga.projectinneed", 
+    "pk": 6
+},
+{
+    "fields": {
+        "users_inneed": [], 
+        "resource": [
+            2
+        ], 
+        "cause": [
+            1
+        ], 
+        "docs_pics": "", 
+        "docs_descr": ""
+    }, 
+    "model": "dopomoga.projectinneed", 
+    "pk": 7
+},
+{
+    "fields": {
+        "resource": [
+            1
+        ], 
+        "cause": [
+            1
+        ]
+    }, 
+    "model": "dopomoga.projecthelper", 
+    "pk": 1
+},
+{
+    "fields": {
+        "resource": [
+            3
+        ], 
+        "cause": [
+            1, 
+            2
+        ]
+    }, 
+    "model": "dopomoga.projecthelper", 
+    "pk": 2
+},
+{
+    "fields": {
+        "resource": [
+            2
+        ], 
+        "cause": [
+            1, 
+            3
+        ]
+    }, 
+    "model": "dopomoga.projecthelper", 
+    "pk": 3
+},
+{
+    "fields": {
+        "resource": [
+            4
+        ], 
+        "cause": [
+            3
+        ]
+    }, 
+    "model": "dopomoga.projecthelper", 
+    "pk": 4
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [
+            1, 
+            2, 
+            3
+        ], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "first_name": "John", 
+        "website": "http://www.test.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "second_name": "Doe", 
+        "place": "Kiev", 
+        "projects_supported": [
+            5, 
+            6, 
+            7
+        ], 
+        "user": [
+            "john"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 1
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [
+            1
+        ], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            2, 
+            3
+        ], 
+        "first_name": "Johnny", 
+        "website": "http://www.test.com/", 
+        "descr": "Test", 
+        "second_name": "Depp", 
+        "place": "Somewhere", 
+        "projects_supported": [
+            5
+        ], 
+        "user": [
+            "johnny"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 2
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            2
+        ], 
+        "first_name": "Johnson", 
+        "website": "http://www.google.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "second_name": "Johnson", 
+        "place": "Kiev", 
+        "projects_supported": [], 
+        "user": [
+            "johnson"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 3
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [
+            1, 
+            2
+        ], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            1
+        ], 
+        "first_name": "Andre", 
+        "website": "http://dopomoga.herokuapp.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "second_name": "Andre", 
+        "place": "Kiev", 
+        "projects_supported": [
+            5, 
+            6, 
+            7
+        ], 
+        "user": [
+            "andrenovax"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 4
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [
+            1
+        ], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            1
+        ], 
+        "first_name": "Jack", 
+        "website": "http://www.google.com/", 
+        "descr": "", 
+        "second_name": "Jet", 
+        "place": "Lviv", 
+        "projects_supported": [
+            7
+        ], 
+        "user": [
+            "jack"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 5
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [
+            1, 
+            2, 
+            3
+        ], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            1, 
+            2, 
+            3
+        ], 
+        "first_name": "Judy", 
+        "website": "http://www.test.com/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra", 
+        "second_name": "Jew", 
+        "place": "Kiev", 
+        "projects_supported": [
+            5, 
+            6, 
+            7
+        ], 
+        "user": [
+            "judy"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 6
+},
+{
+    "fields": {
+        "date_joined": "2014-03-05", 
+        "causes": [
+            1
+        ], 
+        "phone": 0, 
+        "picture": "default.jpg", 
+        "reports": 0, 
+        "resources": [
+            2
+        ], 
+        "first_name": "Andres", 
+        "website": "http://www.test.com.uk/", 
+        "descr": "Sed ac rhoncus leo. Nam molestie, lacus sit amet posuere rhoncus, nisi est posuere purus, et aliquam nunc magna non nisl. Praesent lobortis elementum congue. Nam egestas nunc nibh, sollicitudin semper nibh consequat sed. Etiam mattis ipsum metus, nec sodales risus egestas quis. Curabitur ante odio, faucibus eu mattis ut, congue at orci. Donec ac dui magna.  Etiam tellus nulla, tristique a nulla non, accumsan interdum orci! Etiam malesuada viverra posuere. Proin rhoncus sed orci ut tristique. Duis vehicula neque a sem dapibus aliquet. Fusce dapibus, ante vel sodales aliquam, justo ante interdum neque, luctus tempus enim mauris vitae nibh. Cras vel lorem mollis, volutpat risus nec, rutrum velit. Mauris hendrerit nisi mi, a blandit elit porta ac? In iaculis luctus nulla, at commodo augue porta ut! Aliquam fringilla ipsum vel tempor tincidunt. Cras non felis ante.  Duis eget felis non urna posuere adipiscing in eget augue! Vestibulum tempus convallis ultrices. Donec eleifend eget leo at consequat. Nam et ipsum lorem. Duis at luctus ipsum. Quisque feugiat rhoncus lorem, non rutrum tellus molestie id. Fusce at porta dolor, tincidunt tristique ante. Duis ultrices, est nec vestibulum ultricies, urna tortor dignissim lacus, malesuada sagittis nulla purus sit amet metus. Phasellus neque dolor, malesuada ut odio nec, bibendum pharetra ligula! Vivamus quis lorem sodales; faucibus eros in, feugiat nisl. Maecenas laoreet at diam quis ultricies. Mauris eget magna tortor! Aenean fermentum tortor sed nibh porta accumsan. Vestibulum hendrerit ornare turpis, in placerat risus fringilla sed.", 
+        "second_name": "Anders", 
+        "place": "Mariupol", 
+        "projects_supported": [], 
+        "user": [
+            "andrey"
+        ]
+    }, 
+    "model": "dopomoga.userprofile", 
+    "pk": 7
+},
+{
+    "fields": {
+        "resources": [
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "projects_asked": [
+            1, 
+            2
+        ], 
+        "projects_supported": [
+            5, 
+            6, 
+            7
+        ], 
+        "causes": [
+            1, 
+            2, 
+            3
+        ]
+    }, 
+    "model": "dopomoga.userinneedprofile", 
+    "pk": 1
+},
+{
+    "fields": {
+        "resources": [
+            2, 
+            3
+        ], 
+        "projects_asked": [], 
+        "projects_supported": [
+            5
+        ], 
+        "causes": [
+            1
+        ]
+    }, 
+    "model": "dopomoga.userinneedprofile", 
+    "pk": 2
+},
+{
+    "fields": {
+        "resources": [
+            2
+        ], 
+        "projects_asked": [
+            1, 
+            2, 
+            3
+        ], 
+        "projects_supported": [], 
+        "causes": []
+    }, 
+    "model": "dopomoga.userinneedprofile", 
+    "pk": 3
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "object_repr": "Resource Test 1", 
+        "action_flag": 1, 
+        "object_id": "1", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:52:46.662Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 1
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "object_repr": "Blood", 
+        "action_flag": 1, 
+        "object_id": "2", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:53:30.104Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 2
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "object_repr": "\u0406\u0436\u0430", 
+        "action_flag": 1, 
+        "object_id": "3", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:53:52.801Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 3
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "object_repr": "\u041a\u0440\u043e\u0432", 
+        "action_flag": 2, 
+        "object_id": "2", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:54:04.609Z", 
+        "change_message": "Changed name."
+    }, 
+    "model": "admin.logentry", 
+    "pk": 4
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "object_repr": "\u041e\u0434\u044f\u0433", 
+        "action_flag": 1, 
+        "object_id": "4", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:54:16.856Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 5
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "resource"
+        ], 
+        "object_repr": "\u041b\u0456\u043a\u0438", 
+        "action_flag": 1, 
+        "object_id": "5", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:54:46.445Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 6
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "cause"
+        ], 
+        "object_repr": "\u0417\u0434\u043e\u0440\u043e\u0432'\u044f", 
+        "action_flag": 1, 
+        "object_id": "1", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:55:29.194Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 7
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "cause"
+        ], 
+        "object_repr": "\u0415\u043a\u043e\u043b\u043e\u0433\u0456\u044f", 
+        "action_flag": 1, 
+        "object_id": "2", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:55:47.442Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 8
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "cause"
+        ], 
+        "object_repr": "\u0414\u0456\u0442\u0438", 
+        "action_flag": 1, 
+        "object_id": "3", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T13:56:08.157Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 9
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "object_repr": "Project Helper Test 1", 
+        "action_flag": 1, 
+        "object_id": "1", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:00:59.613Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 10
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "object_repr": "Project Helper Test 2", 
+        "action_flag": 1, 
+        "object_id": "2", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:03:17.639Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 11
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "object_repr": "Project Helper Test 3", 
+        "action_flag": 1, 
+        "object_id": "3", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:04:12.515Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 12
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projecthelper"
+        ], 
+        "object_repr": "Project Helper Test 4", 
+        "action_flag": 1, 
+        "object_id": "4", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:05:09.593Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 13
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneed"
+        ], 
+        "object_repr": "Project In Need Test 1", 
+        "action_flag": 1, 
+        "object_id": "5", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:06:47.494Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 14
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneed"
+        ], 
+        "object_repr": "Project In Need Test 2", 
+        "action_flag": 1, 
+        "object_id": "6", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:08:50.561Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 15
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "projectinneed"
+        ], 
+        "object_repr": "Project In Need Test 3", 
+        "action_flag": 1, 
+        "object_id": "7", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:10:13.952Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 16
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "andrey2", 
+        "action_flag": 3, 
+        "object_id": "2", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:15:38.815Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 17
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "john", 
+        "action_flag": 1, 
+        "object_id": "4", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:16:06.168Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 18
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "john", 
+        "action_flag": 2, 
+        "object_id": "4", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:16:19.328Z", 
+        "change_message": "No fields changed."
+    }, 
+    "model": "admin.logentry", 
+    "pk": 19
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "johnny", 
+        "action_flag": 1, 
+        "object_id": "5", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:16:34.847Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 20
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "johnson", 
+        "action_flag": 1, 
+        "object_id": "6", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:18:50.956Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 21
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedprofile"
+        ], 
+        "object_repr": "john", 
+        "action_flag": 1, 
+        "object_id": "1", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:19:11.591Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 22
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedprofile"
+        ], 
+        "object_repr": "johnny", 
+        "action_flag": 1, 
+        "object_id": "2", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:20:00.846Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 23
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userinneedprofile"
+        ], 
+        "object_repr": "johnson", 
+        "action_flag": 1, 
+        "object_id": "3", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:22:31.471Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 24
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "judy", 
+        "action_flag": 1, 
+        "object_id": "7", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:23:24.030Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 25
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "jack", 
+        "action_flag": 1, 
+        "object_id": "8", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:23:37.872Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 26
+},
+{
+    "fields": {
+        "content_type": [
+            "auth", 
+            "user"
+        ], 
+        "object_repr": "jared", 
+        "action_flag": 1, 
+        "object_id": "9", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:24:06.147Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 27
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "object_repr": "andrenovax", 
+        "action_flag": 1, 
+        "object_id": "4", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:31:19.610Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 28
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "object_repr": "jack", 
+        "action_flag": 1, 
+        "object_id": "5", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:32:09.284Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 29
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "object_repr": "judy", 
+        "action_flag": 1, 
+        "object_id": "6", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:32:56.324Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 30
+},
+{
+    "fields": {
+        "content_type": [
+            "dopomoga", 
+            "userprofile"
+        ], 
+        "object_repr": "andrey", 
+        "action_flag": 1, 
+        "object_id": "7", 
+        "user": [
+            "andrenovax"
+        ], 
+        "action_time": "2014-03-05T14:34:04.721Z", 
+        "change_message": ""
+    }, 
+    "model": "admin.logentry", 
+    "pk": 31
+}
+]
