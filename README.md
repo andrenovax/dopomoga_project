@@ -1,3 +1,7 @@
+<strong>Warning! Deprecated ugly code!</strong><br>
+<strong>Project is going to be restarted with best practices soon</strong>
+
+
 Dopomoga
 ================
 <em>under development since 07/01/2014</em><br>
