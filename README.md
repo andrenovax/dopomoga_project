@@ -1,5 +1,8 @@
-<strong>Warning! Deprecated ugly code!</strong><br>
-<strong>Project is going to be restarted with best practices soon</strong>
+Deprecated project with ugly code!
+================
+Project is going to be restarted with django-rest and backbone / angular this winter.
+----------------
+my first project made in 2 month after learning to code:)
 
 
 Dopomoga
